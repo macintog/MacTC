@@ -1,10 +1,10 @@
 # Checkpoint (MacTC Public Site)
 
 ## Current Focus
-Ship theme ergonomics without violating privacy or static-hosting constraints: add dark mode with automatic system detection plus explicit user override.
+Stabilize the first public website line after shipping system-aware theming, and prepare the next content-focused iteration without regressing privacy or Pages constraints.
 
 ## Why Current Focus Matters
-The site is public, and readability/comfort now matter in long sessions and night use. Theme behavior also becomes a durable contract that future redesigns must preserve.
+The site is now live with a real design system, legal surfaces, and a theme contract. Capturing this state cleanly prevents future copy/design passes from accidentally reintroducing third-party dependencies or breaking `/MacTC/` hosting behavior.
 
 ## Open Blockers / Decisions
 - Final support contact channel wording is still generic across legal pages.
@@ -17,11 +17,12 @@ The site is public, and readability/comfort now matter in long sessions and nigh
 - Site currently avoids Google fonts, Tailwind CDN, and analytics tags.
 - Internal links/assets are relative and compatible with `/MacTC/` hosting.
 - Theme defaults to system preference and supports persisted local override between `Auto`, `Dark`, and `Light`.
+- Live site now renders the theme toggle control (`data-theme-toggle`) on the public homepage.
 
 ## Next Safe Step
-Do one focused copy pass for support/billing language consistency across pricing + legal pages, then optionally add visual proof (screenshots) without changing dependency or hosting constraints.
+Do one focused support/billing copy pass across pricing + legal pages, then decide whether to keep explicit `Mode: Auto/Dark/Light` toggle text or compress it to a tighter icon-first control.
 
 ## Archive References
 - Initial public-site redesign commit on `main`: `416690d`.
-- Continuity-doc setup was introduced with this checkpoint update.
-- Theme mode rollout is captured in this checkpoint update.
+- Continuity-doc setup on `main`: `521aed4`.
+- Theme mode rollout on `main`: `4455baa`.
