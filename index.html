@@ -3,51 +3,149 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>MacTC • macOS utility</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <style>
-            body {
-                font-family: system-ui, sans-serif;
-            }
-        </style>
+        <title>MacTC | Thermal Control For Serious Mac Workloads</title>
+        <meta
+            name="description"
+            content="MacTC helps you keep Apple Silicon clocks stable under heavy local AI and creative workloads without babysitting fan curves."
+        />
+        <meta name="theme-color" content="#f5f1e8" />
+        <link rel="stylesheet" href="assets/css/site.css" />
+        <script defer src="assets/js/site.js"></script>
     </head>
-    <body class="bg-zinc-950 text-zinc-200">
-        <nav class="border-b border-zinc-800 bg-zinc-950">
-            <div
-                class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center"
-            >
-                <a href="index.html" class="text-2xl font-bold">MacTC</a>
-                <div class="space-x-8">
-                    <a href="pricing.html" class="hover:text-white">Pricing</a>
-                    <a href="terms.html" class="hover:text-white">Terms</a>
-                    <a href="refund.html" class="hover:text-white"
-                        >Refund Policy</a
-                    >
-                    <a href="privacy.html" class="hover:text-white">Privacy</a>
+    <body>
+        <header class="site-header">
+            <div class="container nav-wrap">
+                <a class="brand" href="index.html" aria-label="MacTC home">
+                    <span class="brand-mark">MT</span>
+                    <span class="brand-text">MacTC</span>
+                </a>
+                <nav class="main-nav" aria-label="Main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="refund.html">Refunds</a>
+                    <a href="privacy.html">Privacy</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero container reveal">
+                <div>
+                    <p class="eyebrow">THERMAL DISCIPLINE FOR MACOS</p>
+                    <h1>Keep clocks up. Keep noise reasonable. Stay in flow.</h1>
+                    <p class="hero-copy">
+                        MacTC helps you steer cooling behavior under sustained
+                        workload so your machine stays usable through long
+                        sessions, not just short bursts.
+                    </p>
+                    <div class="hero-actions">
+                        <a
+                            class="btn btn-primary"
+                            href="https://github.com/macintog/MacTC/releases"
+                            >Download MacTC</a
+                        >
+                        <a class="btn btn-secondary" href="pricing.html"
+                            >See pricing</a
+                        >
+                    </div>
+                    <p class="hero-note">
+                        Purchases are handled inside the app. No web checkout.
+                    </p>
                 </div>
-            </div>
-        </nav>
+                <aside class="hero-card">
+                    <h2>Built for sustained load, not demos</h2>
+                    <ul>
+                        <li>Track thermal state and fan headroom live</li>
+                        <li>Tune behavior for long AI, build, and render runs</li>
+                        <li>Move between quiet and performance profiles fast</li>
+                    </ul>
+                </aside>
+            </section>
 
-        <div class="max-w-4xl mx-auto px-6 py-20 text-center">
-            <h1 class="text-6xl font-bold tracking-tight mb-6">MacTC</h1>
-            <p class="text-2xl text-zinc-400 mb-10">
-                The macOS utility that makes your life easier.
-            </p>
+            <section class="container section reveal">
+                <div class="section-heading">
+                    <p class="eyebrow">WHY MACTC</p>
+                    <h2>A control surface designed around physics</h2>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <h3>Readable telemetry</h3>
+                        <p>
+                            Understand thermal-soak behavior, not just instant
+                            temperatures, with dashboards that focus on useful
+                            causality.
+                        </p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>Fast mode shifts</h3>
+                        <p>
+                            Move from quiet baseline to aggressive control when
+                            your workload contour changes, without restarting
+                            your process.
+                        </p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>Practical defaults</h3>
+                        <p>
+                            Start from sane policies and adapt to machine
+                            behavior over time rather than hardcoding one-model
+                            assumptions.
+                        </p>
+                    </article>
+                </div>
+            </section>
 
-            <div class="bg-zinc-900 rounded-3xl p-12 mb-12">
-                <p class="text-xl mb-8">
-                    • Feature one<br />• Feature two<br />• Feature three
+            <section class="container section reveal">
+                <div class="section-heading">
+                    <p class="eyebrow">WORKFLOW</p>
+                    <h2>How people typically use MacTC</h2>
+                </div>
+                <ol class="steps">
+                    <li>
+                        <span>1</span>
+                        <div>
+                            <h3>Launch before heavy work</h3>
+                            <p>
+                                Open MacTC and pick your baseline profile before
+                                kicking off long prompts, builds, or renders.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>2</span>
+                        <div>
+                            <h3>Watch trend, not just spikes</h3>
+                            <p>
+                                Use the live view to catch when soak is
+                                accumulating and intervene before throttling
+                                steals throughput.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>3</span>
+                        <div>
+                            <h3>Buy when you are ready</h3>
+                            <p>
+                                Start with the trial and complete purchase from
+                                inside the app when it proves value on your
+                                machine.
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-wrap">
+                <p>MacTC</p>
+                <p>
+                    <span data-year></span> MacTC. Built for macOS utility
+                    workflows.
                 </p>
-                <a
-                    href="pricing.html"
-                    class="inline-block bg-white text-black px-10 py-4 rounded-2xl font-semibold text-lg"
-                    >Get it for $29 — 7-day free trial</a
-                >
             </div>
-
-            <p class="text-zinc-500">
-                Notarized • Sparkle updates • Lifetime license
-            </p>
-        </div>
+        </footer>
     </body>
 </html>

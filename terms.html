@@ -3,22 +3,70 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Terms • MacTC</title>
-        <script src="https://cdn.tailwindcss.com"></script>
+        <title>MacTC Terms</title>
+        <meta name="theme-color" content="#f5f1e8" />
+        <link rel="stylesheet" href="assets/css/site.css" />
+        <script defer src="assets/js/site.js"></script>
     </head>
-    <body
-        class="bg-zinc-950 text-zinc-200 max-w-3xl mx-auto px-6 py-12 prose prose-invert"
-    >
-        <h1 class="text-4xl font-bold mb-8">Terms & Conditions</h1>
+    <body>
+        <header class="site-header">
+            <div class="container nav-wrap">
+                <a class="brand" href="index.html" aria-label="MacTC home">
+                    <span class="brand-mark">MT</span>
+                    <span class="brand-text">MacTC</span>
+                </a>
+                <nav class="main-nav" aria-label="Main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="refund.html">Refunds</a>
+                    <a href="privacy.html">Privacy</a>
+                </nav>
+            </div>
+        </header>
 
-        <p>
-            Our order process is conducted by our online reseller
-            <strong>Paddle.com</strong>.
-            <strong>Paddle.com is the Merchant of Record</strong> for all our
-            orders. Paddle provides all customer service inquiries and handles
-            returns.
-        </p>
+        <main class="container legal reveal">
+            <p class="eyebrow">LEGAL</p>
+            <h1>Terms and Conditions</h1>
+            <p>
+                By using MacTC, you agree to use the software in accordance with
+                applicable law and these terms.
+            </p>
 
-        <!-- Add the rest of your normal terms here -->
+            <h2>License</h2>
+            <p>
+                A purchased MacTC license grants use according to the plan shown
+                in the app at time of purchase. The license is for the purchaser
+                and may not be resold.
+            </p>
+
+            <h2>Billing and merchant of record</h2>
+            <p>
+                MacTC purchase and billing operations are handled in-app. Where
+                Paddle is used for order processing,
+                <strong>Paddle is the merchant of record</strong> and manages
+                billing support and tax handling for those orders.
+            </p>
+
+            <h2>Warranty and liability</h2>
+            <p>
+                MacTC is provided as-is without warranties beyond those required
+                by applicable law. To the maximum extent permitted by law, we
+                are not liable for indirect or consequential damages.
+            </p>
+
+            <h2>Contact</h2>
+            <p>
+                Questions about these terms can be directed through the support
+                channel listed in the app.
+            </p>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-wrap">
+                <p>MacTC</p>
+                <p><span data-year></span> MacTC.</p>
+            </div>
+        </footer>
     </body>
 </html>

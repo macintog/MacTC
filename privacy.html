@@ -3,15 +3,69 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Privacy Policy • MacTC</title>
-        <script src="https://cdn.tailwindcss.com"></script>
+        <title>MacTC Privacy Policy</title>
+        <meta name="theme-color" content="#f5f1e8" />
+        <link rel="stylesheet" href="assets/css/site.css" />
+        <script defer src="assets/js/site.js"></script>
     </head>
-    <body class="bg-zinc-950 text-zinc-200 max-w-3xl mx-auto px-6 py-12">
-        <h1 class="text-4xl font-bold mb-8">Privacy Policy</h1>
-        <p>
-            We collect only the minimum data needed to deliver your license key
-            (email + name). We never sell or share your data. Full details
-            available on request.
-        </p>
+    <body>
+        <header class="site-header">
+            <div class="container nav-wrap">
+                <a class="brand" href="index.html" aria-label="MacTC home">
+                    <span class="brand-mark">MT</span>
+                    <span class="brand-text">MacTC</span>
+                </a>
+                <nav class="main-nav" aria-label="Main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="refund.html">Refunds</a>
+                    <a href="privacy.html">Privacy</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container legal reveal">
+            <p class="eyebrow">LEGAL</p>
+            <h1>Privacy Policy</h1>
+            <p>
+                This website itself does not process checkout transactions.
+                Purchases occur in-app.
+            </p>
+
+            <h2>Data we may process</h2>
+            <p>
+                We may process limited information needed for product support,
+                account service, and license operations, such as email address
+                and communication history.
+            </p>
+
+            <h2>Billing data</h2>
+            <p>
+                When purchases are processed by a merchant-of-record provider,
+                that provider handles payment data according to its own privacy
+                obligations and policy.
+            </p>
+
+            <h2>Retention and sharing</h2>
+            <p>
+                We retain information only as long as needed for operations,
+                legal compliance, and customer service. We do not sell personal
+                data.
+            </p>
+
+            <h2>Your requests</h2>
+            <p>
+                Data access or deletion requests can be made through the support
+                channel listed in the app.
+            </p>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-wrap">
+                <p>MacTC</p>
+                <p><span data-year></span> MacTC.</p>
+            </div>
+        </footer>
     </body>
 </html>
