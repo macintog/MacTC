@@ -31,6 +31,7 @@ Then open `http://localhost:4173/`.
 - Pricing page is informational and points users to install first.
 - Legal pages include merchant-of-record language where applicable.
 - No third-party frontend dependencies (no Tailwind CDN, no Google Fonts, no analytics tags).
+- Theme supports `Auto` (system detection), `Dark`, and `Light` modes with local preference persistence.
 
 ## Before going live
 

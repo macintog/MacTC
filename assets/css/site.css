@@ -1,4 +1,5 @@
 :root {
+    color-scheme: light;
     --bg: #f5f1e8;
     --bg-elevated: #fffaf0;
     --surface: #fffcf5;
@@ -9,7 +10,76 @@
     --accent-strong: #084c4e;
     --ring: #efb85a;
     --shadow: 0 18px 40px rgba(33, 23, 8, 0.14);
+    --bg-glow-a: rgba(13, 107, 110, 0.2);
+    --bg-glow-b: rgba(239, 184, 90, 0.2);
+    --header-border: rgba(96, 88, 77, 0.2);
+    --header-bg: rgba(245, 241, 232, 0.78);
+    --brand-mark-border: rgba(8, 76, 78, 0.28);
+    --brand-mark-bg: rgba(8, 76, 78, 0.08);
+    --btn-primary-shadow: 0 10px 22px rgba(13, 107, 110, 0.24);
+    --btn-primary-text: #ffffff;
+    --btn-secondary-border: rgba(8, 76, 78, 0.24);
+    --btn-secondary-bg: rgba(8, 76, 78, 0.06);
+    --step-chip-border: rgba(8, 76, 78, 0.26);
+    --step-chip-bg: rgba(8, 76, 78, 0.08);
+    --footer-border: rgba(96, 88, 77, 0.2);
     --radius: 18px;
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0f1318;
+    --bg-elevated: #131a21;
+    --surface: #18212a;
+    --ink: #e7edf4;
+    --muted: #aab6c3;
+    --line: #2a3744;
+    --accent: #24b6b1;
+    --accent-strong: #7ce9e4;
+    --ring: #f0c164;
+    --shadow: 0 18px 40px rgba(0, 0, 0, 0.42);
+    --bg-glow-a: rgba(36, 182, 177, 0.2);
+    --bg-glow-b: rgba(240, 193, 100, 0.14);
+    --header-border: rgba(170, 182, 195, 0.24);
+    --header-bg: rgba(15, 19, 24, 0.82);
+    --brand-mark-border: rgba(124, 233, 228, 0.46);
+    --brand-mark-bg: rgba(36, 182, 177, 0.16);
+    --btn-primary-shadow: 0 10px 22px rgba(36, 182, 177, 0.22);
+    --btn-primary-text: #071113;
+    --btn-secondary-border: rgba(124, 233, 228, 0.36);
+    --btn-secondary-bg: rgba(36, 182, 177, 0.14);
+    --step-chip-border: rgba(124, 233, 228, 0.34);
+    --step-chip-bg: rgba(36, 182, 177, 0.14);
+    --footer-border: rgba(170, 182, 195, 0.24);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        color-scheme: dark;
+        --bg: #0f1318;
+        --bg-elevated: #131a21;
+        --surface: #18212a;
+        --ink: #e7edf4;
+        --muted: #aab6c3;
+        --line: #2a3744;
+        --accent: #24b6b1;
+        --accent-strong: #7ce9e4;
+        --ring: #f0c164;
+        --shadow: 0 18px 40px rgba(0, 0, 0, 0.42);
+        --bg-glow-a: rgba(36, 182, 177, 0.2);
+        --bg-glow-b: rgba(240, 193, 100, 0.14);
+        --header-border: rgba(170, 182, 195, 0.24);
+        --header-bg: rgba(15, 19, 24, 0.82);
+        --brand-mark-border: rgba(124, 233, 228, 0.46);
+        --brand-mark-bg: rgba(36, 182, 177, 0.16);
+        --btn-primary-shadow: 0 10px 22px rgba(36, 182, 177, 0.22);
+        --btn-primary-text: #071113;
+        --btn-secondary-border: rgba(124, 233, 228, 0.36);
+        --btn-secondary-bg: rgba(36, 182, 177, 0.14);
+        --step-chip-border: rgba(124, 233, 228, 0.34);
+        --step-chip-bg: rgba(36, 182, 177, 0.14);
+        --footer-border: rgba(170, 182, 195, 0.24);
+    }
 }
 
 * {
@@ -24,8 +94,8 @@ body {
 
 body {
     background:
-        radial-gradient(circle at 0% 0%, rgba(13, 107, 110, 0.2), transparent 50%),
-        radial-gradient(circle at 100% 100%, rgba(239, 184, 90, 0.2), transparent 45%),
+        radial-gradient(circle at 0% 0%, var(--bg-glow-a), transparent 50%),
+        radial-gradient(circle at 100% 100%, var(--bg-glow-b), transparent 45%),
         var(--bg);
     color: var(--ink);
     font-family:
@@ -46,11 +116,11 @@ body {
 }
 
 .site-header {
-    border-bottom: 1px solid rgba(96, 88, 77, 0.2);
+    border-bottom: 1px solid var(--header-border);
     position: sticky;
     top: 0;
     backdrop-filter: blur(10px);
-    background: rgba(245, 241, 232, 0.78);
+    background: var(--header-bg);
     z-index: 20;
 }
 
@@ -60,6 +130,13 @@ body {
     align-items: center;
     min-height: 76px;
     gap: 24px;
+}
+
+.nav-tools {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
 }
 
 .brand {
@@ -76,8 +153,8 @@ body {
     width: 34px;
     height: 34px;
     border-radius: 8px;
-    border: 1px solid rgba(8, 76, 78, 0.28);
-    background: rgba(8, 76, 78, 0.08);
+    border: 1px solid var(--brand-mark-border);
+    background: var(--brand-mark-bg);
     font-family: "SF Mono", Menlo, Consolas, monospace;
     font-size: 0.78rem;
     letter-spacing: 0.07em;
@@ -106,6 +183,39 @@ body {
 .main-nav a:hover,
 .main-nav a[aria-current="page"] {
     color: var(--accent-strong);
+}
+
+.theme-toggle {
+    border: 1px solid var(--btn-secondary-border);
+    border-radius: 999px;
+    background: var(--btn-secondary-bg);
+    color: var(--accent-strong);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px;
+    font: inherit;
+    font-size: 0.84rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-1px);
+}
+
+.theme-toggle:focus-visible {
+    outline: 3px solid var(--ring);
+    outline-offset: 2px;
+}
+
+.theme-toggle-pip {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    border: 1px solid var(--accent-strong);
+    background: var(--accent);
+    flex-shrink: 0;
 }
 
 .hero {
@@ -190,9 +300,9 @@ h2 {
 }
 
 .btn-primary {
-    color: #fff;
+    color: var(--btn-primary-text);
     background: var(--accent);
-    box-shadow: 0 10px 22px rgba(13, 107, 110, 0.24);
+    box-shadow: var(--btn-primary-shadow);
 }
 
 .btn-primary:hover {
@@ -201,8 +311,8 @@ h2 {
 
 .btn-secondary {
     color: var(--accent-strong);
-    border-color: rgba(8, 76, 78, 0.24);
-    background: rgba(8, 76, 78, 0.06);
+    border-color: var(--btn-secondary-border);
+    background: var(--btn-secondary-bg);
 }
 
 .hero-card,
@@ -313,8 +423,8 @@ h2 {
     width: 28px;
     height: 28px;
     border-radius: 999px;
-    border: 1px solid rgba(8, 76, 78, 0.26);
-    background: rgba(8, 76, 78, 0.08);
+    border: 1px solid var(--step-chip-border);
+    background: var(--step-chip-bg);
     display: inline-grid;
     place-items: center;
     font-family: "SF Mono", Menlo, Consolas, monospace;
@@ -374,7 +484,7 @@ h2 {
 }
 
 .site-footer {
-    border-top: 1px solid rgba(96, 88, 77, 0.2);
+    border-top: 1px solid var(--footer-border);
     padding: 24px 0;
     margin-top: 62px;
 }
@@ -428,5 +538,10 @@ h2 {
 
     .main-nav {
         gap: 12px;
+    }
+
+    .nav-tools {
+        width: 100%;
+        justify-content: space-between;
     }
 }

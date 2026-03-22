@@ -29,6 +29,7 @@ Keep the site credible, fast, privacy-respectful, and easy to update as MacTC pr
 - Purchase flow is in-app only.
 - Internal links and assets must remain relative (no root-absolute paths), so Pages works at `/MacTC/`.
 - No third-party frontend dependencies for styling, fonts, or analytics.
+- Theme behavior defaults to system preference (`Auto`) and may be user-overridden locally to `Dark` or `Light`.
 - Legal pages (`terms.html`, `privacy.html`, `refund.html`) are always present and linked from global nav.
 - `main` branch in this repo is the publish surface for GitHub Pages.
 
