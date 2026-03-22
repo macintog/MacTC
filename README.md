@@ -8,6 +8,8 @@ Static public site for MacTC, served by GitHub Pages at:
 
 - `WEB_SPINE.md`: durable website purpose, strategy, and invariants.
 - `CHECKPOINT.md`: current execution state, decisions, and next safe step.
+- `mactc-public-copy-gate.md`: standing rules for public-facing MacTC copy.
+- `mactc-copy-lint-spec.md`: deterministic checklist for validating copy against the gate.
 
 ## Local preview
 
