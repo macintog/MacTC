@@ -4,6 +4,11 @@ Static public site for MacTC, served by GitHub Pages at:
 
 - https://macintog.github.io/MacTC/
 
+## Continuity docs
+
+- `WEB_SPINE.md`: durable website purpose, strategy, and invariants.
+- `CHECKPOINT.md`: current execution state, decisions, and next safe step.
+
 ## Local preview
 
 From this folder:

@@ -1,0 +1,51 @@
+# Web Spine (MacTC Public Site)
+
+## Purpose
+This repo is the public-facing website for MacTC at `https://macintog.github.io/MacTC/`.
+Its job is to explain value, route users to install, and publish legal policy pages.
+
+## Operator Job
+Keep the site credible, fast, privacy-respectful, and easy to update as MacTC product messaging evolves.
+
+## Success Criteria
+- The homepage clearly communicates what MacTC does and who it is for.
+- Visitors can reach download, pricing context, and legal pages in one click.
+- The site remains fully functional on GitHub Pages under `/MacTC/`.
+- The site has no third-party tracking dependencies.
+- Copy stays aligned with the real in-app purchase flow.
+
+## Non-Goals
+- This website does not run checkout.
+- This website is not the app documentation portal.
+- This website is not a metrics-heavy marketing stack.
+
+## Durable Product Strategy
+- Keep the site static and lightweight (plain HTML/CSS/JS).
+- Preserve an intentional visual voice, but avoid design churn without product reason.
+- Treat privacy posture as a first-class product message.
+- Keep conversion flow simple: website -> install app -> trial -> in-app purchase.
+
+## Stable Constraints / Invariants
+- Purchase flow is in-app only.
+- Internal links and assets must remain relative (no root-absolute paths), so Pages works at `/MacTC/`.
+- No third-party frontend dependencies for styling, fonts, or analytics.
+- Legal pages (`terms.html`, `privacy.html`, `refund.html`) are always present and linked from global nav.
+- `main` branch in this repo is the publish surface for GitHub Pages.
+
+## Design System Guardrails
+- Reuse `assets/css/site.css` and `assets/js/site.js` for shared behavior and styling.
+- Prefer local/system font stacks over remote font hosting.
+- Keep motion meaningful and lightweight; respect reduced-motion behavior.
+- Desktop and mobile layouts must both be intentionally designed, not incidental.
+
+## Workstream Map
+- Messaging and UX: homepage + pricing narrative.
+- Legal and trust: terms/privacy/refund content and support routing.
+- Publishing and operations: Git workflow, Pages deploy health, and link integrity.
+
+## Authority Map
+- `WEB_SPINE.md`: durable website intent and invariants.
+- `CHECKPOINT.md`: current focus, active decisions, and near-term execution state.
+- `README.md`: quick start and operator entrypoint.
+- `index.html`, `pricing.html`, `terms.html`, `privacy.html`, `refund.html`: shipped content surface.
+- `assets/css/site.css`, `assets/js/site.js`: shared implementation surface.
