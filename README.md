@@ -30,6 +30,8 @@ Then open `http://localhost:4173/`.
 - Public downloadables belong in `downloads/`, using versioned installer and Sparkle archive filenames.
 - This repo is the only MacTC surface allowed on GitHub. Do not publish source code or other files from the parent app repo here.
 - The public `main` branch is intended to be a rewritten current snapshot. Website diffs/history are not treated as a durable public surface; older builds remain public only when intentionally retained under `downloads/`.
+- Local authoring history should stay on the `source` branch; the public `main` branch is publish-only output.
+- Public snapshot commit subjects should be short, user-facing notes with no boilerplate prefix, because GitHub repeats the same subject beside each touched file.
 
 ## Content notes
 

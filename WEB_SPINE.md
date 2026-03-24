@@ -34,6 +34,7 @@ Keep the site credible, fast, privacy-respectful, and easy to update as MacTC pr
 - `main` branch in this repo is the publish surface for GitHub Pages.
 - Only public-safe website content and shipped install/update artifacts belong in this repo. Parent app source code and private docs do not.
 - Public branch history is intentionally disposable. The supported public contract is the current tree plus any deliberately retained files under `downloads/`, not a permanent public diff trail.
+- Public snapshot commit subjects are part of the visible operator surface and should stay brief, user-facing, and free of boilerplate prefixes because GitHub repeats them in the file listing.
 
 ## Design System Guardrails
 - Reuse `assets/css/site.css` and `assets/js/site.js` for shared behavior and styling.
