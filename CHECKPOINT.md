@@ -1,14 +1,13 @@
 # Checkpoint (MacTC Public Site)
 
 ## Current Focus
-Stabilize the first public website line after the public-copy compliance pass, and prepare the next content-focused iteration without regressing privacy or Pages constraints.
+Enforce the durable GitHub publishing boundary so this repo is the only public MacTC surface, with the current installer package in `downloads/` and the live Sparkle feed at repo root.
 
 ## Why Current Focus Matters
-The site now has a compliant baseline for homepage, pricing, and refund messaging alongside the existing design system, legal surfaces, and theme contract. Capturing this state cleanly prevents future copy/design passes from reintroducing overclaim language or breaking `/MacTC/` hosting behavior.
+The app repo is private product source, while this repo is the public website and artifact bucket. Encoding that split here prevents future packaging or copy updates from leaking parent-repo source or reintroducing GitHub Releases as a second public surface.
 
 ## Open Blockers / Decisions
 - Final support contact channel wording is still generic across legal pages.
-- Download CTA currently targets GitHub releases; confirm whether this should stay primary or move to a dedicated download landing path.
 - Decide when to introduce screenshots/product visuals versus staying copy-first.
 - Decide whether the theme toggle copy should remain explicit (`Mode: Auto/Dark/Light`) or shift to a more compact icon-first control.
 
@@ -16,6 +15,7 @@ The site now has a compliant baseline for homepage, pricing, and refund messagin
 - `main` serves live GitHub Pages content at `https://macintog.github.io/MacTC/`.
 - Site currently avoids Google fonts, Tailwind CDN, and analytics tags.
 - Internal links/assets are relative and compatible with `/MacTC/` hosting.
+- Public download/install surfaces live in this repo only: `appcast.xml` at root and downloadable artifacts under `downloads/`.
 - Theme defaults to system preference and supports persisted local override between `Auto`, `Dark`, and `Light`.
 - Live site now renders the theme toggle control (`data-theme-toggle`) on the public homepage.
 - Homepage copy now states the fan-behavior change, fan-noise/activity tradeoff, and variability/no-guarantee qualifier near the main claim.

@@ -2,7 +2,7 @@
 
 ## Purpose
 This repo is the public-facing website for MacTC at `https://macintog.github.io/MacTC/`.
-Its job is to explain value, route users to install, and publish legal policy pages.
+Its job is to explain value, route users to install, publish legal policy pages, and host the public-safe installer/update artifacts the app downloads.
 
 ## Operator Job
 Keep the site credible, fast, privacy-respectful, and easy to update as MacTC product messaging evolves.
@@ -32,6 +32,7 @@ Keep the site credible, fast, privacy-respectful, and easy to update as MacTC pr
 - Theme behavior defaults to system preference (`Auto`) and may be user-overridden locally to `Dark` or `Light`.
 - Legal pages (`terms.html`, `privacy.html`, `refund.html`) are always present and linked from global nav.
 - `main` branch in this repo is the publish surface for GitHub Pages.
+- Only public-safe website content and shipped install/update artifacts belong in this repo. Parent app source code and private docs do not.
 
 ## Design System Guardrails
 - Reuse `assets/css/site.css` and `assets/js/site.js` for shared behavior and styling.
@@ -43,6 +44,7 @@ Keep the site credible, fast, privacy-respectful, and easy to update as MacTC pr
 - Messaging and UX: homepage + pricing narrative.
 - Legal and trust: terms/privacy/refund content and support routing.
 - Publishing and operations: Git workflow, Pages deploy health, and link integrity.
+- Public artifact hosting: `appcast.xml`, installer packages, and Sparkle archives under `downloads/`.
 
 ## Authority Map
 - `WEB_SPINE.md`: durable website intent and invariants.

@@ -4,7 +4,7 @@
         <title>MacTC</title>
         <item>
             <title>1.0 (340)</title>
-            <pubDate>Tue, 24 Mar 2026 13:14:15 -0400</pubDate>
+            <pubDate>Tue, 24 Mar 2026 13:30:21 -0400</pubDate>
             <link>https://macintog.github.io/MacTC/</link>
             <sparkle:version>340</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
@@ -13,11 +13,11 @@
             <description><![CDATA[<h1>MacTC 1.0 (340)</h1>
 <ul>
   <li>Sparkle now shows MacTC version strings with the internal build number, including the "currently the newest version available" message.</li>
-  <li>Auto-update packaging is now aligned with GitHub Releases for archives and GitHub Pages for the appcast feed.</li>
+  <li>Public update artifacts now ship from the GitHub Pages repo itself, with the appcast at the repo root and the archive under <code>downloads/</code>.</li>
   <li>No helper reinstall is required for this update.</li>
 </ul>
 ]]></description>
-            <enclosure url="https://github.com/macintog/MacTC/releases/download/v1.0-b340/MacTC-v1.0-b340.zip" length="4263674" type="application/octet-stream" sparkle:edSignature="c+GgrgpLgzVnVjiHk+CVEudAO+J0me28ql8XAKtZ6Jv8OIHFh1J+qH4jmqKfXri+NDnNhmRq5jhMlgssAlo8Aw=="/>
+            <enclosure url="https://macintog.github.io/MacTC/downloads/MacTC-v1.0-b340.zip" length="4263674" type="application/octet-stream" sparkle:edSignature="gKL+xMUTGCniSemmfytFHLmvVCbXHUw1TS059pLIi4/QpHqZY8WUoSPoLv0crZ+kPbVLbz8y4ojKjuU+bNLlAw=="/>
         </item>
     </channel>
 </rss>
