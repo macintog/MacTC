@@ -24,6 +24,7 @@ Then open `http://localhost:4173/`.
 ## Deployment model
 
 - This folder is a standalone git repo with remote: `macintog/MacTC`.
+- This repo lives nested under the private MacTC source tree for operator convenience, but it is its own Git boundary and is intentionally ignored by the parent repo.
 - GitHub Pages should publish from the default branch root.
 - All links are relative so pages work both locally and at `/MacTC/`.
 - Sparkle appcasts should live at the repo root as `appcast.xml` so installed MacTC builds can fetch `https://macintog.github.io/MacTC/appcast.xml`.

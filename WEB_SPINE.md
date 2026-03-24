@@ -26,6 +26,7 @@ Keep the site credible, fast, privacy-respectful, and easy to update as MacTC pr
 - Keep conversion flow simple: website -> install app -> trial -> in-app purchase.
 
 ## Stable Constraints / Invariants
+- This repo may live nested under the private MacTC source tree, but it remains a separate Git surface with its own history and publish mechanics.
 - Purchase flow is in-app only.
 - Internal links and assets must remain relative (no root-absolute paths), so Pages works at `/MacTC/`.
 - No third-party frontend dependencies for styling, fonts, or analytics.
