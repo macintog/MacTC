@@ -1,7 +1,7 @@
 # Checkpoint (MacTC Public Site)
 
 ## Current Focus
-Enforce the durable GitHub publishing boundary so this repo is the only public MacTC surface, with the current installer package in `downloads/` and the live Sparkle feed at repo root.
+Enforce the durable GitHub publishing boundary so this repo is the only public MacTC surface, with the live Sparkle feed at repo root and versioned installer/update artifacts in `downloads/`.
 
 ## Why Current Focus Matters
 The app repo is private product source, while this repo is the public website and artifact bucket. Encoding that split here prevents future packaging or copy updates from leaking parent-repo source or reintroducing GitHub Releases as a second public surface.

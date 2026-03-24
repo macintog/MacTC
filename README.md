@@ -27,7 +27,7 @@ Then open `http://localhost:4173/`.
 - GitHub Pages should publish from the default branch root.
 - All links are relative so pages work both locally and at `/MacTC/`.
 - Sparkle appcasts should live at the repo root as `appcast.xml` so installed MacTC builds can fetch `https://macintog.github.io/MacTC/appcast.xml`.
-- Public downloadables belong in `downloads/`, including the current installer package and versioned Sparkle archives.
+- Public downloadables belong in `downloads/`, using versioned installer and Sparkle archive filenames.
 - This repo is the only MacTC surface allowed on GitHub. Do not publish source code or other files from the parent app repo here.
 
 ## Content notes
