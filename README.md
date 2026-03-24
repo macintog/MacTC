@@ -26,6 +26,8 @@ Then open `http://localhost:4173/`.
 - This folder is a standalone git repo with remote: `macintog/MacTC`.
 - GitHub Pages should publish from the default branch root.
 - All links are relative so pages work both locally and at `/MacTC/`.
+- Sparkle appcasts should live at the repo root as `appcast.xml` so installed MacTC builds can fetch `https://macintog.github.io/MacTC/appcast.xml`.
+- Sparkle update archives themselves should stay in GitHub Releases for `macintog/MacTC`; Pages only needs to host the feed XML.
 
 ## Content notes
 
