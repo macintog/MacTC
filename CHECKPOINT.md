@@ -16,6 +16,7 @@ The app repo is private product source, while this repo is the public website an
 - Site currently avoids Google fonts, Tailwind CDN, and analytics tags.
 - Internal links/assets are relative and compatible with `/MacTC/` hosting.
 - Public download/install surfaces live in this repo only: `appcast.xml` at root and downloadable artifacts under `downloads/`.
+- Public website history is now intended to be published as a rewritten current snapshot rather than an append-only public changelog.
 - Theme defaults to system preference and supports persisted local override between `Auto`, `Dark`, and `Light`.
 - Live site now renders the theme toggle control (`data-theme-toggle`) on the public homepage.
 - Homepage copy now states the fan-behavior change, fan-noise/activity tradeoff, and variability/no-guarantee qualifier near the main claim.
