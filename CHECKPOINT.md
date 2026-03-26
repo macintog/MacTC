@@ -1,14 +1,14 @@
 # Checkpoint (MacTC Public Site)
 
 ## Current Focus
-Refresh the homepage narrative so the public site explains who MacTC is for, why it exists, and what tradeoff it makes without violating the durable GitHub publishing boundary.
+Keep refining the homepage so the product split is obvious early: the GUI window is free forever, while the background fan control is the paid product.
 
 ## Why Current Focus Matters
-The public site was technically accurate, but too abstract to explain the workload-shaped problem that created MacTC in the first place. Folding that founder-story context into the homepage should make the product legible without turning the site into a hypey or over-claiming marketing surface.
+The public site now explains the workload-shaped origin story more clearly, but the higher-value messaging problem is making the free utility window and the paid background controller immediately legible without losing the founder voice that makes the product make sense.
 
 ## Open Blockers / Decisions
 - Final support contact channel wording is still generic across legal pages.
-- Decide when to introduce screenshots/product visuals versus staying copy-first.
+- Evaluate the live homepage balance between hero copy, the new free-vs-paid section, and the collapsed backstory after viewing the published page in-browser.
 - Decide whether the theme toggle copy should remain explicit (`Mode: Auto/Dark/Light`) or shift to a more compact icon-first control.
 
 ## Validation Evidence
@@ -21,13 +21,17 @@ The public site was technically accurate, but too abstract to explain the worklo
 - Theme defaults to system preference and supports persisted local override between `Auto`, `Dark`, and `Light`.
 - Live site now renders the theme toggle control (`data-theme-toggle`) on the public homepage.
 - Homepage copy now states the fan-behavior change, fan-noise/activity tradeoff, and variability/no-guarantee qualifier near the main claim.
-- Homepage narrative now incorporates the longer operator backstory: most users do not need MacTC, the product is aimed at sustained heavy workloads, and the story is grounded in observed LM Studio / GPU-clock slowdown rather than generic fan-control language.
+- Homepage narrative now incorporates the longer operator backstory, but the story is collapsed behind a native disclosure so it does not dominate the page for visitors who only need the product summary.
+- The homepage now introduces the product split explicitly: the GUI window is free forever, while the background fan-control logic is the paid product.
+- Public GUI screenshot asset now lives at `assets/images/mactc-gui-window.png` and is used to support the free-window explanation.
+- The backstory now links to the current `mactop` repo (`metaspartan/mactop`) and renders the install command as inline code.
 - Homepage and pricing CTA links now point at the current `downloads/MacTC-beta-v1.0-b347.pkg` installer instead of the older `b340` package.
 - Pricing copy now reinforces that the website is informational and that purchase assent happens in-app.
 - Refund copy now uses plain refund-policy wording instead of `money-back guarantee`.
+- Current local authoring branch is `source @ ecb0714`; current published snapshot is `origin/main @ 5c52e301166c9580589e903083072eb42a563559`.
 
 ## Next Safe Step
-Preview the revised homepage locally, decide whether to add screenshots to support the new story-first layout, and finalize the concrete support contact wording across pricing and legal pages.
+Review the live homepage in a browser, then continue tightening hero wording and section emphasis around the free GUI versus paid background controller if the top of page still feels too dense.
 
 ## Archive References
 - Initial public-site redesign commit on `main`: `416690d`.
