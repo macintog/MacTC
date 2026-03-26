@@ -21,6 +21,10 @@ python3 -m http.server 4173
 
 Then open `http://localhost:4173/`.
 
+For design review, the authoritative local surface is also the direct file render:
+
+`file:///Users/ryand/playground/mactc/github_page/index.html`
+
 ## Deployment model
 
 - This folder is a standalone git repo with remote: `macintog/MacTC`.
@@ -32,7 +36,9 @@ Then open `http://localhost:4173/`.
 - This repo is the only MacTC surface allowed on GitHub. Do not publish source code or other files from the parent app repo here.
 - The public `main` branch is intended to be a rewritten current snapshot. Website diffs/history are not treated as a durable public surface; older builds remain public only when intentionally retained under `downloads/`.
 - Local authoring history should stay on the `source` branch; the public `main` branch is publish-only output.
+- Short-lived topic branches may be used for active edits, but they should merge back into `source` before the next publish so the authoring lane remains authoritative.
 - Public snapshot commit subjects should be short, user-facing notes with no boilerplate prefix, because GitHub repeats the same subject beside each touched file.
+- After publishing, wait for GitHub Pages to settle and verify the served `https://macintog.github.io/MacTC/` files before declaring the publish complete.
 
 ## Content notes
 
@@ -41,6 +47,7 @@ Then open `http://localhost:4173/`.
 - Legal pages include merchant-of-record language where applicable.
 - No third-party frontend dependencies (no Tailwind CDN, no Google Fonts, no analytics tags).
 - Theme supports `Auto` (system detection), `Dark`, and `Light` modes with local preference persistence.
+- The current homepage direction is a flatter editorial layout with minimal overline copy, stronger grouped hero geometry, and the founder backstory pushed to the bottom of the page.
 
 ## Before going live
 
