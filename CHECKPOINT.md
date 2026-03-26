@@ -1,7 +1,7 @@
 # Checkpoint (MacTC Public Site)
 
 ## Current Focus
-Keep refining the homepage so the product split is obvious early: the GUI window is free forever, while the background fan control is the paid product.
+Keep refining the homepage so the product split is obvious early: the GUI window is free forever, while the background fan control is the paid product. The current slice is a hybrid visual refresh that preserves that structure while stripping out the overly soft rounded-card language.
 
 ## Why Current Focus Matters
 The public site now explains the workload-shaped origin story more clearly, but the higher-value messaging problem is making the free utility window and the paid background controller immediately legible without losing the founder voice that makes the product make sense.
@@ -29,11 +29,13 @@ The public site now explains the workload-shaped origin story more clearly, but 
 - Pricing copy now reinforces that the website is informational and that purchase assent happens in-app.
 - Refund copy now uses plain refund-policy wording instead of `money-back guarantee`.
 - Current local authoring branch is `source @ ecb0714`; current published snapshot is `origin/main @ 5c52e301166c9580589e903083072eb42a563559`.
+- Preserved design anchor: tag `design-2026-03-26-pre-kimi-hybrid` points at the last pre-hybrid live-site authoring commit (`7b0406d`).
 
 ## Next Safe Step
-Review the live homepage in a browser, then continue tightening hero wording and section emphasis around the free GUI versus paid background controller if the top of page still feels too dense.
+Review the refreshed live homepage in a browser, confirm the flatter panel language feels intentional rather than generic, then continue tightening hero wording and section emphasis around the free GUI versus paid background controller if the top of page still feels too dense.
 
 ## Archive References
 - Initial public-site redesign commit on `main`: `416690d`.
 - Continuity-doc setup on `main`: `521aed4`.
 - Theme mode rollout on `main`: `4455baa`.
+- Pre-hybrid rounded-card design anchor on `source`: `design-2026-03-26-pre-kimi-hybrid` -> `7b0406d`.

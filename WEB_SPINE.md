@@ -36,6 +36,7 @@ Keep the site credible, fast, privacy-respectful, and easy to update as MacTC pr
 - Only public-safe website content and shipped install/update artifacts belong in this repo. Parent app source code and private docs do not.
 - Public branch history is intentionally disposable. The supported public contract is the current tree plus any deliberately retained files under `downloads/`, not a permanent public diff trail.
 - Public snapshot commit subjects are part of the visible operator surface and should stay brief, user-facing, and free of boilerplate prefixes because GitHub repeats them in the file listing.
+- Preserve intentional visual milestones with explicit Git anchors in the authoring lane when a redesign would otherwise make an earlier shipped look hard to rediscover later. Current baseline anchor: tag `design-2026-03-26-pre-kimi-hybrid` on `source`.
 
 ## Design System Guardrails
 - Reuse `assets/css/site.css` and `assets/js/site.js` for shared behavior and styling.
