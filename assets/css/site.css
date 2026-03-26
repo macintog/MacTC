@@ -318,7 +318,8 @@ h2 {
 .hero-card,
 .feature-card,
 .pricing-card,
-.legal {
+.legal,
+.story-card {
     border: 1px solid var(--line);
     border-radius: var(--radius);
     background: var(--surface);
@@ -399,6 +400,59 @@ h2 {
 .feature-card p {
     color: var(--muted);
     margin-top: 10px;
+}
+
+.story-grid {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    gap: 18px;
+    align-items: start;
+}
+
+.story-card {
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.story-card::after {
+    content: "";
+    position: absolute;
+    inset: auto -40px -50px auto;
+    width: 180px;
+    height: 180px;
+    border-radius: 999px;
+    background: radial-gradient(circle, var(--bg-glow-a), transparent 68%);
+    pointer-events: none;
+}
+
+.story-card-featured {
+    background:
+        linear-gradient(140deg, var(--btn-secondary-bg), transparent 55%),
+        var(--surface);
+}
+
+.story-card h3 {
+    margin-top: 10px;
+    font-size: clamp(1.3rem, 3vw, 1.9rem);
+    max-width: 18ch;
+}
+
+.story-card p {
+    margin-top: 14px;
+    color: var(--muted);
+    max-width: 62ch;
+}
+
+.story-card a {
+    color: var(--accent-strong);
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 0.14em;
+}
+
+.story-card a:hover {
+    color: var(--accent);
 }
 
 .steps {
@@ -521,6 +575,10 @@ h2 {
 
 @media (max-width: 900px) {
     .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .story-grid {
         grid-template-columns: 1fr;
     }
 

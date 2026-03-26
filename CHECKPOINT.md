@@ -1,10 +1,10 @@
 # Checkpoint (MacTC Public Site)
 
 ## Current Focus
-Enforce the durable GitHub publishing boundary so this repo is the only public MacTC surface, with the live Sparkle feed at repo root and versioned installer/update artifacts in `downloads/`.
+Refresh the homepage narrative so the public site explains who MacTC is for, why it exists, and what tradeoff it makes without violating the durable GitHub publishing boundary.
 
 ## Why Current Focus Matters
-The app repo is private product source, while this repo is the public website and artifact bucket. Encoding that split here prevents future packaging or copy updates from leaking parent-repo source or reintroducing GitHub Releases as a second public surface.
+The public site was technically accurate, but too abstract to explain the workload-shaped problem that created MacTC in the first place. Folding that founder-story context into the homepage should make the product legible without turning the site into a hypey or over-claiming marketing surface.
 
 ## Open Blockers / Decisions
 - Final support contact channel wording is still generic across legal pages.
@@ -21,11 +21,13 @@ The app repo is private product source, while this repo is the public website an
 - Theme defaults to system preference and supports persisted local override between `Auto`, `Dark`, and `Light`.
 - Live site now renders the theme toggle control (`data-theme-toggle`) on the public homepage.
 - Homepage copy now states the fan-behavior change, fan-noise/activity tradeoff, and variability/no-guarantee qualifier near the main claim.
+- Homepage narrative now incorporates the longer operator backstory: most users do not need MacTC, the product is aimed at sustained heavy workloads, and the story is grounded in observed LM Studio / GPU-clock slowdown rather than generic fan-control language.
+- Homepage and pricing CTA links now point at the current `downloads/MacTC-beta-v1.0-b347.pkg` installer instead of the older `b340` package.
 - Pricing copy now reinforces that the website is informational and that purchase assent happens in-app.
 - Refund copy now uses plain refund-policy wording instead of `money-back guarantee`.
 
 ## Next Safe Step
-Finalize the concrete support contact wording across pricing and legal pages, then decide whether to keep explicit `Mode: Auto/Dark/Light` toggle text or compress it to a tighter icon-first control.
+Preview the revised homepage locally, decide whether to add screenshots to support the new story-first layout, and finalize the concrete support contact wording across pricing and legal pages.
 
 ## Archive References
 - Initial public-site redesign commit on `main`: `416690d`.
