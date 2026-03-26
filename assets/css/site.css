@@ -433,6 +433,10 @@ h2 {
         var(--surface);
 }
 
+.story-card-full {
+    grid-column: 1 / -1;
+}
+
 .story-card h3 {
     margin-top: 10px;
     font-size: clamp(1.3rem, 3vw, 1.9rem);

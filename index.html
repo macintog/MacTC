@@ -94,67 +94,85 @@
                 <div class="section-heading">
                     <p class="eyebrow">THE BACKSTORY</p>
                     <h2>Built after watching long GPU jobs get slower in real time</h2>
-                    <p>
-                        The story behind MacTC is not "fans are too quiet." It
-                        is "this machine stayed pleasant while a real workload
-                        quietly gave up speed." That is a much narrower and more
-                        useful reason for the product to exist.
-                    </p>
                 </div>
                 <div class="story-grid">
-                    <article class="story-card story-card-featured">
-                        <p class="eyebrow">WHAT I SAW</p>
-                        <h3>Long runs in LM Studio would start fast, then fade.</h3>
+                    <article class="story-card story-card-featured story-card-full">
+                        <p class="eyebrow">THE BACKSTORY</p>
+                        <h3>Long-running jobs kept getting slower, even after the fans were already up.</h3>
                         <p>
-                            On one M4 Max MacBook Pro, repeated local model runs
-                            in
+                            I've been using a number of LLMs on my M4 Max
+                            MacBook Pro using the amazing
                             <a href="https://lmstudio.ai/" rel="noreferrer"
                                 >LM Studio</a
-                            >
-                            made the slowdown obvious: tokens per second would
-                            drift down several minutes into sustained work, even
-                            after the fans had already started climbing.
-                        </p>
-                        <p>
-                            Checking the machine with
+                            >. I noticed some sustained workloads seemed to get
+                            slower and slower. This is easy to detect in an LLM
+                            harness like LM Studio where it can show you the
+                            tokens per second (t/s) rate after every response.
+                            When I ran a bunch of queries back to back on some
+                            models, the fans would spin up as expected, but I
+                            noticed my t/s falling off substantially. Using the
+                            outstanding
                             <a
                                 href="https://github.com/context-labs/mactop"
                                 rel="noreferrer"
                                 >mactop</a
                             >
-                            made the pattern easier to understand. GPU clocks
-                            began near full speed, then stepped down as heat
-                            soaked in. On that system, a paid-for 40-core GPU
-                            could behave more like a much smaller one once the
-                            session had been hot for a while.
+                            tool (`brew install mactop`), I immediately saw that
+                            the GPU clock speed was starting at 100%, and then
+                            progressively dropping several minutes into
+                            long-running jobs. While I had paid an extra $300 to
+                            jump from the available 32-core GPU to 40 cores,
+                            under a few minutes of heavy load, I was left with a
+                            24-core GPU's worth of performance!
                         </p>
                         <p>
-                            That is not a universal claim about every Mac. It
-                            is the workload shape that pushed MacTC into
-                            existence: long, heavy sessions where staying quiet
-                            can eventually cost throughput.
-                        </p>
-                    </article>
-                    <article class="story-card">
-                        <p class="eyebrow">WHAT MACTC TRIES INSTEAD</p>
-                        <h3>Be as quiet as practical, but not at the cost of avoidable slowdown.</h3>
-                        <p>
-                            Fixed fan percentages were often the wrong tradeoff
-                            in both directions: noisier than necessary when the
-                            machine was comfortable, but still too late once
-                            sustained GPU heat had already built up.
+                            I experimented with some of the available Mac apps
+                            for adjusting the fans. What I found was that for
+                            my GPU-heavy LLM workloads, the set-it-and-forget-it
+                            fan options were sometimes needlessly noisy and yet
+                            still wouldn't prevent all thermal throttling in
+                            cases where just blasting the fans at 100% did help.
+                            Nobody wants a noisy machine, and Apple did a
+                            fantastic job with their tradeoffs, <em>to a
+                            point.</em> But I wanted the performance I bought,
+                            and if achieving that was sometimes louder, that was
+                            the trade-off I was willing to make.
                         </p>
                         <p>
-                            MacTC defers to the system by default, then tries to
-                            front-run rising heat debt with more fan earlier
-                            when the workload looks like it may outrun Apple's
-                            quieter preference.
+                            After a lengthy investigation of how my system
+                            handled power, heat, clocks, and fans, I found that
+                            the "fixed fan % based on temp" model is simply
+                            unsuited for heavy loads lasting more than a few
+                            minutes. The system has an inherent notion of the
+                            thermal soak properties of the SoC. In practice this
+                            means, your Mac will be quite lazy about ramping up
+                            the fans initially even when the CPU/GPU shoots past
+                            90&deg;C, and it will not throttle speeds. But if
+                            that heat load continues for a couple minutes, the
+                            fans will happily sit at (in my particular system's
+                            case) 62% of max fan speed while reducing the clock
+                            speeds and hence performance.
                         </p>
                         <p>
-                            And when throttling begins, it can push much harder,
-                            then back down toward the lowest fan level that
-                            still holds performance. Results vary, and better
-                            outcomes are not guaranteed in every circumstance.
+                            That is the problem I set out to solve for at least
+                            some workloads with MacTC. It defers to the
+                            system's fan choices by default, but when it
+                            observes power and heat rising, it should attempt to
+                            front-run that heat debt with more fan earlier,
+                            while still being as quiet as possible. And when
+                            thermal throttling begins, it will take the fans to
+                            full speed only for as long as it takes to end the
+                            throttling, and then attempt to fall off to the
+                            lowest fan speed that can sustain full performance.
+                            And even when it does run the fans full blast, it
+                            should never slam them straight to 100%. It should
+                            always try to ramp up and down over a few seconds.
+                            In normal use, this will tend to give the
+                            experience of noticing "oh my fans are on," versus
+                            "wow my fans just came on." Nobody wants to be
+                            annoyed by fan noise, but for anyone who finds the
+                            idea of running slowly when it might be prevented,
+                            MacTC is for you.
                         </p>
                     </article>
                 </div>
