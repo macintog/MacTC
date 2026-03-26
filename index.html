@@ -47,18 +47,16 @@
                 <div>
                     <p class="eyebrow">THERMAL CONTROL FOR REAL WORKLOADS</p>
                     <h1>
-                        When your Mac stays quiet but your throughput starts
-                        sliding, MacTC leans into cooling sooner.
+                        When staying quiet starts costing the performance you
+                        paid for.
                     </h1>
                     <p class="hero-copy">
-                        For most people, macOS thermal control is exactly the
-                        right tradeoff. MacTC is for the smaller group running
-                        long local AI, build, or creative sessions who would
-                        rather hear more fan activity than give up available
-                        speed. It changes fan behavior to pursue lower operating
-                        temperatures during sustained work, but results vary by
-                        Mac model, workload, ambient conditions, and system
-                        state.
+                        Most Macs are making the right tradeoff most of the
+                        time. MacTC is for the workloads where staying quieter
+                        starts giving up speed you would rather keep. It changes
+                        fan behavior to pursue lower operating temperatures
+                        during sustained work, typically with more fan activity
+                        and more fan noise.
                     </p>
                     <div class="hero-actions">
                         <a
@@ -71,17 +69,15 @@
                         >
                     </div>
                     <p class="hero-note">
-                        Most users will not need it. If you would trade quiet
-                        for throughput on your machine, MacTC may be worth
-                        trying. Purchases are handled inside the app.
+                        Most users will not need it. If you would rather hear
+                        the fans than give up the performance you paid for,
+                        MacTC may be worth trying. Purchases are handled inside
+                        the app.
                     </p>
                 </div>
                 <aside class="hero-card">
                     <p class="eyebrow">THE SHORT VERSION</p>
-                    <h2>
-                        Apple's defaults are right for most people. MacTC is
-                        for the other case.
-                    </h2>
+                    <h2>Most Macs are making the right tradeoff.</h2>
                     <div class="hero-summary">
                         <p>
                             Your Mac's fans and thermal control are right for
@@ -95,14 +91,14 @@
                             MacTC adds an intelligent fan algorithm on top of
                             the system's default thermal control. It makes the
                             opposite tradeoff: as quiet as possible, but
-                            without giving up available speed when earlier fan
-                            action can still help.
+                            without giving up the performance you paid for when
+                            earlier fan action can still help.
                         </p>
                         <p>
-                            Most users will not need to use MacTC, but the
-                            people who do may find it invaluable for getting
-                            the performance they paid for on their specific
-                            machine and workload.
+                            Most users will not need MacTC. The people who do
+                            may find it invaluable for enjoying more of the
+                            performance they paid for on their specific machine
+                            and workload.
                         </p>
                     </div>
                 </aside>
@@ -120,11 +116,6 @@
                     <article
                         class="story-card story-card-featured story-card-full"
                     >
-                        <p class="eyebrow">THE BACKSTORY</p>
-                        <h3>
-                            Long-running jobs kept getting slower, even after
-                            the fans were already up.
-                        </h3>
                         <p>
                             I've been using a number of LLMs on my M4 Max
                             MacBook Pro using the amazing
@@ -143,13 +134,14 @@
                                 rel="noreferrer"
                                 >mactop</a
                             >
-                            tool (`brew install mactop`), I immediately saw that
-                            the GPU clock speed was starting at 100%, and then
-                            progressively dropping several minutes into
-                            long-running jobs. While I had paid an extra $300 to
-                            jump from the available 32-core GPU to 40 cores,
-                            under a few minutes of heavy load, I was left with a
-                            24-core GPU's worth of performance!
+                            tool (<code>brew install mactop</code>), I
+                            immediately saw that the GPU clock speed was
+                            starting at 100%, and then progressively dropping
+                            several minutes into long-running jobs. While I had
+                            paid an extra $300 to jump from the available
+                            32-core GPU to 40 cores, under a few minutes of
+                            heavy load, I was left with a 24-core GPU's worth
+                            of performance!
                         </p>
                         <p>
                             I experimented with some of the available Mac apps
@@ -205,26 +197,23 @@
 
             <section class="container section reveal">
                 <div class="section-heading compact">
-                    <p class="eyebrow">WARNINGS &amp; CAVEATS</p>
-                    <h2>What that story does and does not mean</h2>
-                    <p>
-                        The backstory above is one operator&apos;s account of
-                        one machine and one workload shape. It explains why
-                        MacTC exists, but it is not a promise that every
-                        supported Mac will show the same slowdown, the same fan
-                        behavior, or the same result under load.
-                    </p>
+                    <p class="eyebrow">PRODUCT CAVEATS</p>
+                    <h2>What MacTC does and does not promise</h2>
                     <p>
                         MacTC changes fan behavior to pursue lower operating
                         temperatures, typically with more fan activity and more
                         fan noise. Results vary by Mac model, firmware,
                         workload, sensors, ambient conditions, and system
-                        state, and no fan-control policy can guarantee better
-                        thermal or performance outcomes in every circumstance.
-                        In rare or unforeseen cases, MacTC may be less
-                        effective than intended or may worsen thermal behavior.
-                        Apple&apos;s default behavior is still the right tradeoff
-                        for most users.
+                        state.
+                    </p>
+                    <p>
+                        No fan-control policy can guarantee better thermal or
+                        performance outcomes in every circumstance. In rare or
+                        unforeseen cases, MacTC may be less effective than
+                        intended or may worsen thermal behavior. The backstory
+                        above explains why MacTC exists on one machine and one
+                        workload, but it should not be read as a promise that
+                        every supported Mac will behave the same way.
                     </p>
                 </div>
             </section>
