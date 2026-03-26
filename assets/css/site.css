@@ -330,7 +330,9 @@ code {
 .feature-card,
 .pricing-card,
 .legal,
-.story-card {
+.story-card,
+.product-shot,
+.split-card {
     border: 1px solid var(--line);
     border-radius: var(--radius);
     background: var(--surface);
@@ -424,6 +426,52 @@ code {
     margin-top: 10px;
 }
 
+.product-split-grid {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+    gap: 18px;
+    align-items: start;
+}
+
+.product-shot {
+    margin: 0;
+    padding: 14px;
+}
+
+.product-shot img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: calc(var(--radius) - 6px);
+    border: 1px solid var(--line);
+}
+
+.product-shot figcaption {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 0.94rem;
+}
+
+.split-copy {
+    display: grid;
+    gap: 16px;
+}
+
+.split-card {
+    padding: 20px;
+}
+
+.split-card h3 {
+    margin-top: 10px;
+    font-size: 1.08rem;
+}
+
+.split-card p:last-child {
+    margin-top: 10px;
+    color: var(--muted);
+}
+
 .story-grid {
     margin-top: 24px;
     display: grid;
@@ -479,6 +527,42 @@ code {
 
 .story-card a:hover {
     color: var(--accent);
+}
+
+.story-disclosure {
+    margin-top: 24px;
+}
+
+.story-disclosure summary {
+    cursor: pointer;
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--btn-secondary-border);
+    background: var(--btn-secondary-bg);
+    color: var(--accent-strong);
+    font-weight: 700;
+}
+
+.story-disclosure summary::-webkit-details-marker {
+    display: none;
+}
+
+.story-disclosure summary::before {
+    content: "+";
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.95rem;
+}
+
+.story-disclosure[open] summary::before {
+    content: "-";
+}
+
+.story-disclosure > .story-card {
+    margin-top: 16px;
 }
 
 .steps {
@@ -604,6 +688,7 @@ code {
         grid-template-columns: 1fr;
     }
 
+    .product-split-grid,
     .story-grid {
         grid-template-columns: 1fr;
     }
