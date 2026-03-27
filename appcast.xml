@@ -5,7 +5,7 @@
         <item>
             <title>1.0</title>
             <pubDate>Wed, 25 Mar 2026 16:18:21 -0400</pubDate>
-            <link>https://macintog.github.io/MacTC/</link>
+            <link>https://mactc.dev/</link>
             <sparkle:version>347</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
@@ -17,7 +17,7 @@
   <li>No helper reinstall is required for this update.</li>
 </ul>
 ]]></description>
-            <enclosure url="https://macintog.github.io/MacTC/downloads/MacTC-v1.0-b347.zip" length="4318754" type="application/octet-stream" sparkle:edSignature="KJXacko87OEKaO50OxjnWfJV/XJLjEk+W7RVH2492XxQYQEeqy41wUAGwPeFm8L/WXusm22c/7cFMpdZZGOsCg=="/>
+            <enclosure url="https://mactc.dev/downloads/MacTC-v1.0-b347.zip" length="4318754" type="application/octet-stream" sparkle:edSignature="KJXacko87OEKaO50OxjnWfJV/XJLjEk+W7RVH2492XxQYQEeqy41wUAGwPeFm8L/WXusm22c/7cFMpdZZGOsCg=="/>
         </item>
     </channel>
 </rss>
