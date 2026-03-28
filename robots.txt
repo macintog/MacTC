@@ -1,2 +1,5 @@
 User-agent: *
-Disallow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Allow: /
+
+Sitemap: https://mactc.dev/sitemap.xml
