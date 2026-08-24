@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MacTC EULA</title>
+    <meta
+      name="description"
+      content="End User License Agreement for MacTC, including thermal-control disclosures, warranty limits, and liability terms."
+    />
+    <meta name="robots" content="noindex,follow" />
+    <link rel="canonical" href="https://mactc.dev/terms.html" />
+    <meta name="theme-color" content="#07090b" />
+    <link rel="icon" href="assets/images/mactc-app-icon.png" />
+    <script>
+      (function () {
+        var root = document.documentElement;
+        function setThemeColor(isDark) {
+          var themeColor = document.querySelector('meta[name="theme-color"]');
+          if (themeColor) {
+            themeColor.setAttribute("content", isDark ? "#07090b" : "#f4f5f7");
+          }
+        }
+        try {
+          var mode = localStorage.getItem("mactc-theme-mode") || "auto";
+          if (mode !== "auto" && mode !== "dark" && mode !== "light") {
+            mode = "auto";
+          }
+          var isDark =
+            mode === "dark" ||
+            (mode === "auto" &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches);
+          root.setAttribute("data-theme", isDark ? "dark" : "light");
+          root.setAttribute("data-theme-mode", mode);
+          setThemeColor(isDark);
+        } catch (error) {
+          var fallbackDark = window.matchMedia(
+            "(prefers-color-scheme: dark)",
+          ).matches;
+          root.setAttribute("data-theme", fallbackDark ? "dark" : "light");
+          root.setAttribute("data-theme-mode", "auto");
+          setThemeColor(fallbackDark);
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="assets/css/site.css?v=20260820c" />
+    <script defer src="assets/js/site.js?v=20260820c"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="MacTC home">
+          <span class="brand-mark">
+            <img
+              src="assets/images/mactc-app-icon.png"
+              alt=""
+              class="brand-icon"
+              width="256"
+              height="256"
+              decoding="async"
+            />
+          </span>
+          <span class="brand-text">MacTC</span>
+        </a>
+        <div class="nav-tools">
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="blog.html">Blog</a>
+            <a href="terms.html">EULA</a>
+            <a href="refund.html">Refunds</a>
+            <a href="privacy.html">Privacy</a>
+          </nav>
+          <button class="theme-toggle" type="button" data-theme-toggle>
+            <span class="theme-toggle-pip" aria-hidden="true"></span>
+            <span data-theme-toggle-label>Mode: Auto</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container content-narrow legal reveal">
+      <!-- BEGIN GENERATED EULA -->
+      <p class="eyebrow">LEGAL</p>
+      <h1>MacTC End User License Agreement</h1>
+      <p>Effective date: July 14, 2026</p>
+      <p>MacTC is offered by R&amp;D Solutions LLC under the Macintog brand. This End User License Agreement governs your installation and use of MacTC.</p>
+      <h2>1. Thermal Control Software</h2>
+      <p>MacTC modifies or evaluates fan behavior and related thermal-management behavior on supported Mac hardware. In System mode, MacTC evaluates fan behavior while macOS controls the fans. When MacTC mode is enabled and active fan control is available, its purpose is to pursue lower operating temperatures, typically at the cost of more fan activity, more fan noise, and potentially more power use.</p>
+      <h2>2. No Guarantee of Outcome</h2>
+      <p>MacTC is intended to improve thermal control in many situations, but R&amp;D Solutions LLC does not represent or warrant that using MacTC will improve temperatures, improve stability, improve hardware safety, improve component longevity, prevent throttling, or produce any other specific result in every circumstance.</p>
+      <p>Thermal behavior depends on many factors outside the developer&#x27;s control, including hardware differences, component aging, firmware behavior, macOS behavior, background workloads, battery condition, charger state, external displays, docked or clamshell use, ambient temperature, airflow, dust, sleep and wake transitions, sensor errors, third-party software, and future operating system or firmware changes.</p>
+      <p>In rare or unforeseen circumstances, MacTC may be less effective than intended or may worsen thermal behavior.</p>
+      <h2>3. Assumption of Risk</h2>
+      <p>By installing, enabling, or using MacTC, and especially by enabling MacTC mode or any other non-default control mode when active fan control is available, you acknowledge that modifying fan behavior carries inherent risk and that not all hardware, firmware, environmental, and workload interactions can be predicted, modeled, or prevented.</p>
+      <h2>4. No Warranty</h2>
+      <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, MACTC IS PROVIDED &quot;AS IS,&quot; &quot;WITH ALL FAULTS,&quot; AND &quot;AS AVAILABLE.&quot; R&amp;D SOLUTIONS LLC DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, QUIET ENJOYMENT, AND NON-INFRINGEMENT.</p>
+      <p>WITHOUT LIMITING THE FOREGOING, R&amp;D SOLUTIONS LLC DOES NOT WARRANT THAT MACTC WILL:</p>
+      <ul>
+  <li>achieve any particular thermal result;</li>
+  <li>be compatible with all Mac hardware or software configurations;</li>
+  <li>operate without interruption or error;</li>
+  <li>prevent overheating, throttling, instability, component aging, battery degradation, or hardware damage; or</li>
+  <li>remain effective after future operating system, firmware, or hardware changes.</li>
+</ul>
+      <p>No oral or written statement, documentation, support communication, marketing statement, or other information provided by R&amp;D Solutions LLC creates any warranty unless expressly stated in a signed written agreement.</p>
+      <h2>5. Limitation of Liability</h2>
+      <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, R&amp;D SOLUTIONS LLC SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF DATA, LOSS OF USE, LOSS OF PROFITS, BUSINESS INTERRUPTION, COST OF REPAIR, COST OF REPLACEMENT EQUIPMENT, DIMINUTION IN VALUE, OR OTHER COMMERCIAL OR PERSONAL LOSS ARISING OUT OF OR RELATED TO MACTC OR ITS USE OR INABILITY TO BE USED, HOWEVER CAUSED AND UNDER ANY THEORY OF LIABILITY.</p>
+      <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, R&amp;D SOLUTIONS LLC&#x27;S TOTAL AGGREGATE LIABILITY ARISING OUT OF OR RELATED TO MACTC SHALL NOT EXCEED THE GREATER OF:</p>
+      <ul>
+  <li>the amount you paid for MacTC in the twelve months preceding the event giving rise to the claim; or</li>
+  <li>US $50.</li>
+</ul>
+      <h2>6. User Responsibility</h2>
+      <p>You are responsible for using MacTC only on hardware and operating system versions identified as supported. You are also responsible for following the documentation, warnings, and recommended operating conditions, including maintaining reasonable airflow and avoiding obviously unsafe environmental conditions.</p>
+      <h2>7. Personal License and Activations</h2>
+      <p>MacTC may automatically check for signed software updates. You can turn automatic update checks off or choose a manual check in MacTC Settings.</p>
+      <p>A paid MacTC purchase grants one personal, non-transferable license for use by the purchaser on up to five active MacTC installations at a time. The license is not a five-person, family, business-seat, resale, or redistribution license.</p>
+      <p>During an active trial, MacTC may occasionally check the license service to determine whether the trial period has been extended.</p>
+      <p>A refund or payment reversal will end paid access. Free monitoring remains available.</p>
+      <p>You can restore purchase access, check access, and manage active installations. If five installations are already active, another installation may be activated only after an existing one is deactivated.</p>
+      <p>MacTC may process limited purchase, device, and software information needed to provide trials, purchases, restores, installation management, compatibility, and paid access. The Privacy Policy describes this processing.</p>
+      <h2>8. Support Captures and Submitted Data</h2>
+      <p>Capture &amp; Submit is optional and user-initiated. When you choose it, MacTC records and uploads a sanitized diagnostic capture to MacTC support and keeps a copy on your Mac.</p>
+      <p>The submitted capture is designed not to include personal files, app contents, information about other running apps, usernames, hardware serial numbers, or license information.</p>
+      <p>Submitted captures may be used to provide support, diagnose issues, improve MacTC, prevent abuse, and operate the support service. Uploaded captures are stored privately, are not sold or public, and are retained for no longer than the period stated in the Privacy Policy.</p>
+      <h2>9. Indemnity for Misuse</h2>
+      <p>You agree to indemnify, defend, and hold harmless R&amp;D Solutions LLC from third-party claims, liabilities, damages, judgments, losses, and reasonable attorneys&#x27; fees arising from:</p>
+      <ul>
+  <li>your misuse of MacTC;</li>
+  <li>your use of MacTC contrary to the documentation or warnings;</li>
+  <li>your use of MacTC on unsupported hardware or unsupported system configurations after notice of incompatibility;</li>
+  <li>your disabling or bypassing of safety-related features provided by MacTC; or</li>
+  <li>your modification or redistribution of MacTC in violation of this Agreement.</li>
+</ul>
+      <p>This indemnity does not require you to indemnify R&amp;D Solutions LLC for claims to the extent caused by its own fraud, willful misconduct, or any liability that cannot be shifted or limited under applicable law.</p>
+      <h2>10. Consumer Rights Carveout</h2>
+      <p>Some jurisdictions do not allow certain disclaimers, exclusions, indemnity provisions, or limitations of liability. To the extent such laws apply to you, some parts of this Agreement may not apply, and this Agreement will apply only to the maximum extent permitted by applicable law.</p>
+      <h2>11. Acknowledgment</h2>
+      <p>By installing or using MacTC, you acknowledge that you have read and understood this Agreement, including the sections titled No Guarantee of Outcome, Assumption of Risk, No Warranty, Limitation of Liability, Personal License and Activations, and Support Captures and Submitted Data, and that you agree to them.</p>
+      <!-- END GENERATED EULA -->
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-brand">MacTC</p>
+        <p class="footer-meta">
+          &copy; <span data-year></span> R&amp;D Solutions LLC. All rights
+          reserved. MacTC is offered under the Macintog brand.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MacTC | Mac Fan Control for Apple Silicon Heavy Workloads</title>
+    <meta
+      name="description"
+      content="MacTC is a native Apple Silicon thermal controller for Mac users who would rather spend fan noise than lose performance during sustained local AI, build, creative, and gaming workloads."
+    />
+    <link rel="canonical" href="https://mactc.dev/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="MacTC | Mac Fan Control for Apple Silicon Heavy Workloads"
+    />
+    <meta
+      property="og:description"
+      content="MacTC is a native Apple Silicon thermal controller for Mac users who would rather spend fan noise than lose performance during sustained local AI, build, creative, and gaming workloads."
+    />
+    <meta property="og:url" content="https://mactc.dev/" />
+    <meta
+      property="og:image"
+      content="https://mactc.dev/assets/images/mactc-social-preview.jpg?v=20260820a"
+    />
+    <meta
+      property="og:image:alt"
+      content="MacTC social preview showing the app icon, thermal chart background, and MacTC app window"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="MacTC | Mac Fan Control for Apple Silicon Heavy Workloads"
+    />
+    <meta
+      name="twitter:description"
+      content="MacTC is a native Apple Silicon thermal controller for Mac users who would rather spend fan noise than lose performance during sustained local AI, build, creative, and gaming workloads."
+    />
+    <meta
+      name="twitter:image"
+      content="https://mactc.dev/assets/images/mactc-social-preview.jpg?v=20260820a"
+    />
+    <meta name="theme-color" content="#07090b" />
+    <link rel="icon" href="assets/images/mactc-app-icon.png" />
+    <link
+      rel="preload"
+      href="assets/images/mactc-gui-window-read-only.png?v=20260820b"
+      as="image"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href="assets/images/mactc-gui-window.png?v=20260713a"
+      as="image"
+    />
+    <script>
+      (function () {
+        var root = document.documentElement;
+        function setThemeColor(isDark) {
+          var themeColor = document.querySelector('meta[name="theme-color"]');
+          if (themeColor) {
+            themeColor.setAttribute("content", isDark ? "#07090b" : "#f4f5f7");
+          }
+        }
+        try {
+          var mode = localStorage.getItem("mactc-theme-mode") || "auto";
+          if (mode !== "auto" && mode !== "dark" && mode !== "light") {
+            mode = "auto";
+          }
+          var isDark =
+            mode === "dark" ||
+            (mode === "auto" &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches);
+          root.setAttribute("data-theme", isDark ? "dark" : "light");
+          root.setAttribute("data-theme-mode", mode);
+          setThemeColor(isDark);
+        } catch (error) {
+          var fallbackDark = window.matchMedia(
+            "(prefers-color-scheme: dark)",
+          ).matches;
+          root.setAttribute("data-theme", fallbackDark ? "dark" : "light");
+          root.setAttribute("data-theme-mode", "auto");
+          setThemeColor(fallbackDark);
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="assets/css/site.css?v=20260820c" />
+    <script defer src="assets/js/site.js?v=20260820c"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="MacTC home">
+          <span class="brand-mark">
+            <img
+              src="assets/images/mactc-app-icon.png"
+              alt=""
+              class="brand-icon"
+              width="256"
+              height="256"
+              decoding="async"
+            />
+          </span>
+          <span class="brand-text">MacTC</span>
+        </a>
+        <div class="nav-tools">
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="blog.html">Blog</a>
+            <a href="terms.html">EULA</a>
+            <a href="refund.html">Refunds</a>
+            <a href="privacy.html">Privacy</a>
+          </nav>
+          <button class="theme-toggle" type="button" data-theme-toggle>
+            <span class="theme-toggle-pip" aria-hidden="true"></span>
+            <span data-theme-toggle-label>Mode: Auto</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero reveal">
+        <div class="hero-backdrop" aria-hidden="true">
+          <canvas class="thermal-canvas" id="thermalCanvas"></canvas>
+        </div>
+        <div class="container container-wide hero-layout">
+          <div>
+            <h1>Adaptive fan control for sustained Mac performance.</h1>
+            <p class="hero-copy">
+              More fan as heat builds. Less as it clears.
+            </p>
+            <div class="hero-bargain" aria-label="MacTC tradeoff summary">
+              <p>
+                <strong>Earlier cooling</strong>
+                <span>before accumulated heat turns into lost performance</span>
+              </p>
+              <p>
+                <strong>System mode</strong>
+                <span>stays one click away, so you can compare under the same load</span>
+              </p>
+              <p>
+                <strong>More fan noise</strong>
+                <span>with results that depend on the machine and the workload</span>
+              </p>
+            </div>
+            <div class="hero-lower">
+              <div>
+                <div class="hero-actions">
+                  <a class="btn btn-primary" href="downloads/MacTC-646b.pkg"
+                    >Download the read-only trial</a
+                  >
+                  <a class="btn btn-secondary" href="pricing.html"
+                    >See pricing</a
+                  >
+                </div>
+                <p class="hero-note">
+                  The GUI is free forever. Purchase unlocks background fan
+                  control after trial. Purchase starts in MacTC and is
+                  completed through Paddle’s secure checkout in your browser.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <figure class="product-shot hero-product-shot">
+            <img
+              class="product-shot-image product-shot-image-primary"
+              src="assets/images/mactc-gui-window-read-only.png?v=20260820b"
+              alt="MacTC read-only utility window showing live chart, metrics, and System mode"
+              width="737"
+              height="735"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="container container-wide system-brief-section reveal">
+        <div class="system-brief-copy system-brief-copy-wide">
+          <h2>
+            Apple’s default favors quiet. MacTC lets you choose cooling that
+            favors performance.
+          </h2>
+          <p>
+            Your Mac is tuned to stay calm and quiet through normal work. Under
+            longer heavy loads, that quiet-first choice can let heat accumulate
+            before the fans get assertive. MacTC changes that tradeoff. It asks
+            for more fan earlier when sustained heat threatens performance, then
+            backs off when the extra cooling is no longer earning its noise.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="container container-wide section reveal"
+        id="compatibility"
+      >
+        <div class="section-heading compact">
+          <h2>Compatibility</h2>
+          <p>
+            Current MacTC builds are arm64 and require macOS 14 or later.
+            Active fan control has been validated on the two-fan M4 MacBook Pro
+            and one-fan M2 Mac mini configurations.
+          </p>
+          <p>
+            On a confirmed fanless Apple Silicon Mac, MacTC stays in
+            monitoring-only mode. Monitoring remains available on other
+            Apple Silicon fan configurations, but active fan control is not
+            currently supported until that configuration is validated. Future
+            macOS or firmware updates may require fresh validation.
+          </p>
+        </div>
+      </section>
+
+      <section class="container container-wide section reveal">
+        <div class="section-heading compact">
+          <h2>
+            Built for sustained jobs where accumulated heat can become the
+            hidden performance limit.
+          </h2>
+          <p>
+            MacTC is for power users who run long local workloads and would
+            rather hear the fans earlier than watch those jobs slow down.
+          </p>
+        </div>
+        <div class="workload-grid">
+          <article class="workload-block">
+            <h3>Local AI and ML</h3>
+            <p>
+              Long inference sessions, repeated prompts, and other sustained
+              GPU-heavy work where accumulated heat can reduce performance over
+              time.
+            </p>
+          </article>
+
+          <article class="workload-block">
+            <h3>Build and compile loops</h3>
+            <p>
+              Repeated local builds, test suites, indexing, and compile loops
+              where small heat-related slowdowns can add up through the day.
+            </p>
+          </article>
+
+          <article class="workload-block">
+            <h3>Creative production</h3>
+            <p>
+              Video exports, renders, encodes, and media jobs that stay hot long
+              enough for fan behavior to affect completion time.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="container container-wide section reveal">
+        <div class="section-heading">
+          <h2>
+            Use the live monitor for free. Keep earlier-fan control after it
+            proves useful.
+          </h2>
+        </div>
+
+        <div class="product-rail product-rail-open">
+          <figure class="product-shot" data-product-shot>
+            <img
+              class="product-shot-image product-shot-image-primary"
+              src="assets/images/mactc-gui-window.png?v=20260713a"
+              alt="MacTC utility window showing live chart, metrics, and mode controls"
+              width="1368"
+              height="1272"
+              decoding="async"
+            />
+            <img
+              class="product-shot-image product-shot-image-secondary"
+              src="assets/images/mactc-gui-window-advanced.png?v=20260713a"
+              alt=""
+              width="1368"
+              height="1272"
+              decoding="async"
+              aria-hidden="true"
+            />
+          </figure>
+          <div class="split-copy split-copy-open">
+            <article class="split-block" data-shot-target="advanced">
+              <h3>The free window is the live monitor.</h3>
+              <p>
+                MacTC shows live temperatures, fan speeds, power, and the fan
+                target it would use while you stay in System mode. During the
+                seven-day free trial, MacTC mode can actually control the fans
+                so you can compare it under real work.
+              </p>
+            </article>
+
+            <article
+              class="split-block split-block-paid"
+              data-shot-target="default"
+            >
+              <h3>The background controller is what you are buying.</h3>
+              <p>
+                The paid layer is MacTC fan control that keeps running in the
+                menu bar, watches sustained heat, and changes fan behavior when
+                you want more fan earlier.
+              </p>
+              <p>
+                The seven-day free trial exists so you can test that policy on
+                your own machine, under your own workloads, before buying.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="container container-wide section reveal">
+        <div class="section-heading compact">
+          <h2>Earlier fan, with plain limits.</h2>
+          <p>
+            MacTC changes fan timing under sustained load. It is not an
+            all-fans-all-the-time mode, and it does not promise better results
+            every time.
+          </p>
+        </div>
+
+        <div class="caveat-grid caveat-grid-open">
+          <article class="caveat-block caveat-block-warning">
+            <h3>More fan noise is the tradeoff</h3>
+            <p>
+              MacTC uses more fan activity to pursue lower temperatures when
+              performance matters more than silence.
+            </p>
+          </article>
+
+          <article class="caveat-block">
+            <h3>System remains the comparison</h3>
+            <p>
+              System mode stays available, and the dotted fan line shows what
+              MacTC would ask for before paid control enforces it.
+            </p>
+          </article>
+
+          <article class="caveat-block">
+            <h3>Outcomes depend on the workload</h3>
+            <p>
+              Thermal results vary by machine, workload, ambient conditions,
+              firmware, sensors, and current system state.
+            </p>
+          </article>
+
+          <article class="caveat-block">
+            <h3>No fan strategy wins every case</h3>
+            <p>
+              In rare or unforeseen cases, MacTC may be less effective than
+              intended or may worsen thermal behavior.
+            </p>
+          </article>
+        </div>
+        <p class="caveat-footer">
+          Future macOS updates may change thermal-management behavior or remove
+          access that MacTC depends on. MacTC does not claim Apple approval or
+          any particular warranty outcome.
+        </p>
+      </section>
+
+      <section class="container container-wide section reveal">
+        <div class="section-heading compact story-heading">
+          <h2>Why MacTC exists</h2>
+        </div>
+        <div class="story-disclosure-wrap">
+          <details class="story-disclosure">
+            <summary>Read the backstory</summary>
+            <article class="story-card">
+              <p>
+                I've been using a number of LLMs on my M4 Max MacBook Pro using
+                <a href="https://lmstudio.ai/" rel="noreferrer">LM Studio</a>. I
+                noticed some sustained workloads seemed to get slower and
+                slower. This is easy to detect in an LLM harness like LM Studio
+                where it can show you the tokens per second (t/s) rate after
+                every response. When I ran a bunch of queries back to back on
+                some models, the fans would spin up as expected, but I noticed
+                my t/s falling off substantially. Using
+                <a href="https://github.com/metaspartan/mactop" rel="noreferrer"
+                  >mactop</a
+                >
+                (<code>brew install mactop</code>), I immediately saw that
+                GPU performance was starting at 100%, and then progressively
+                dropping several minutes into long-running jobs. While I had
+                paid an extra $300 to jump from the available 32-core GPU to 40
+                cores, under a few minutes of heavy load, I was sometimes left
+                with a 24-core GPU's worth of performance.
+              </p>
+              <p>
+                I experimented with some of the available Mac apps for adjusting
+                the fans. What I found was that for my GPU-heavy LLM workloads,
+                the set-it-and-forget-it fan options were sometimes noisy, and
+                still would not prevent all thermal throttling in cases where
+                blasting the fans at 100% did help. Nobody wants a noisy
+                machine, and Apple's quiet-first tradeoff is right for everyday
+                use. I wanted the performance I bought, and if that was
+                sometimes louder, that was the tradeoff I was willing to make.
+              </p>
+              <p>
+                After a lengthy investigation of how my system handled power,
+                heat, performance, and fans, I found that the
+                fixed-fan-percent-by-temperature model is simply unsuited for
+                some heavy loads lasting more than a few minutes. The system has
+                an inherent notion of the thermal soak properties of the SoC. In
+                practice this means my Mac was quite lazy about ramping up the
+                fans initially even when the CPU and GPU shot past 90&deg;C, and
+                it did not throttle speeds early. But if that heat load
+                continued for a couple minutes, the fans would happily sit at a
+                middling speed while reducing performance.
+              </p>
+              <p>
+                That is the problem I set out to solve for at least some
+                workloads with MacTC. It defers to the system's fan choices by
+                default, but when it observes power and heat rising, it should
+                try to get ahead of accumulated heat with more fan earlier,
+                while still being as quiet as possible. And when thermal throttling
+                begins, it will take the fans higher only for as long as it
+                takes to end the throttling, and then attempt to fall off to the
+                lowest fan speed that can sustain full performance.
+              </p>
+              <p>
+                When MacTC does increase fan speed, it deliberately takes a few
+                seconds. The difference at your desk is "oh, my fans are on"
+                versus "wow, my fans just came on." That small whoosh is
+                aggravating all by itself.
+              </p>
+            </article>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-brand">MacTC</p>
+        <p class="footer-meta">
+          &copy; <span data-year></span> R&amp;D Solutions LLC. All rights
+          reserved. MacTC is offered under the Macintog brand.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

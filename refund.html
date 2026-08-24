@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MacTC Refund Policy</title>
+    <meta
+      name="description"
+      content="Request a MacTC refund within 30 days and learn what to send, what happens next, and how Paddle returns your payment."
+    />
+    <meta name="robots" content="noindex,follow" />
+    <link
+      rel="canonical"
+      href="https://mactc.dev/refund.html"
+    />
+    <meta name="theme-color" content="#07090b" />
+    <link rel="icon" href="assets/images/mactc-app-icon.png" />
+    <script>
+      (function () {
+        var root = document.documentElement;
+        function setThemeColor(isDark) {
+          var themeColor = document.querySelector('meta[name="theme-color"]');
+          if (themeColor) {
+            themeColor.setAttribute("content", isDark ? "#07090b" : "#f4f5f7");
+          }
+        }
+        try {
+          var mode = localStorage.getItem("mactc-theme-mode") || "auto";
+          if (mode !== "auto" && mode !== "dark" && mode !== "light") {
+            mode = "auto";
+          }
+          var isDark =
+            mode === "dark" ||
+            (mode === "auto" &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches);
+          root.setAttribute("data-theme", isDark ? "dark" : "light");
+          root.setAttribute("data-theme-mode", mode);
+          setThemeColor(isDark);
+        } catch (error) {
+          var fallbackDark = window.matchMedia(
+            "(prefers-color-scheme: dark)",
+          ).matches;
+          root.setAttribute("data-theme", fallbackDark ? "dark" : "light");
+          root.setAttribute("data-theme-mode", "auto");
+          setThemeColor(fallbackDark);
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="assets/css/site.css?v=20260820c" />
+    <script defer src="assets/js/site.js?v=20260820c"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="MacTC home">
+          <span class="brand-mark">
+            <img
+              src="assets/images/mactc-app-icon.png"
+              alt=""
+              class="brand-icon"
+              width="256"
+              height="256"
+              decoding="async"
+            />
+          </span>
+          <span class="brand-text">MacTC</span>
+        </a>
+        <div class="nav-tools">
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="blog.html">Blog</a>
+            <a href="terms.html">EULA</a>
+            <a href="refund.html">Refunds</a>
+            <a href="privacy.html">Privacy</a>
+          </nav>
+          <button class="theme-toggle" type="button" data-theme-toggle>
+            <span class="theme-toggle-pip" aria-hidden="true"></span>
+            <span data-theme-toggle-label>Mode: Auto</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container content-narrow legal reveal">
+      <p class="eyebrow">REFUNDS</p>
+      <h1>Request a MacTC refund</h1>
+      <p>
+        Bought MacTC within the last <strong>30 days</strong>? Send the Paddle
+        transaction ID from your receipt and we’ll take it from there. MacTC
+        offers a full refund for its one-time purchase when you contact us
+        within 30 days of the purchase date.
+      </p>
+
+      <form
+        class="support-intake-form pricing-cta"
+        data-support-form
+        data-support-endpoint="https://registration.mactc.dev/support/refund"
+        data-pending-label="Sending request…"
+        data-success-message="Request received. If Paddle confirms the transaction, we’ll reply at the email you provided."
+      >
+        <div class="support-form-field">
+          <label for="refund-reply-email">Your reply email</label>
+          <input
+            id="refund-reply-email"
+            name="reply_email"
+            type="email"
+            autocomplete="email"
+            maxlength="254"
+            required
+          />
+        </div>
+        <div class="support-form-field">
+          <label for="refund-transaction-id">Paddle transaction ID</label>
+          <input
+            id="refund-transaction-id"
+            name="transaction_id"
+            type="text"
+            autocomplete="off"
+            maxlength="128"
+            aria-describedby="refund-transaction-help"
+            required
+          />
+          <p class="support-form-help" id="refund-transaction-help">
+            Look for a transaction number beginning with <code>txn_</code> on
+            your Paddle receipt. Do not send card details or your MacTC
+            registration code.
+          </p>
+        </div>
+        <div class="support-form-trap" aria-hidden="true">
+          <label for="refund-company">Company</label>
+          <input
+            id="refund-company"
+            name="company"
+            type="text"
+            autocomplete="off"
+            tabindex="-1"
+          />
+        </div>
+        <button class="btn btn-primary" type="submit">Send refund request</button>
+        <p class="support-form-status" data-support-form-status role="status" aria-live="polite"></p>
+      </form>
+
+      <h2>What to do</h2>
+      <ol class="steps pricing-cta">
+        <li>
+          <span>1</span>
+          <div>
+            <h3>Use an address where we can reply</h3>
+            <p>
+              The checkout address is usually the fastest one for us to match,
+              but the Paddle transaction ID is what lets us verify the order.
+            </p>
+          </div>
+        </li>
+        <li>
+          <span>2</span>
+          <div>
+            <h3>Give us enough to find the order</h3>
+            <p>
+              The form accepts only your reply address and transaction ID. It
+              does not ask for card details, a reason, or your MacTC
+              registration code.
+            </p>
+          </div>
+        </li>
+        <li>
+          <span>3</span>
+          <div>
+            <h3>Watch for Paddle’s confirmation</h3>
+            <p>
+              We’ll locate the order and submit the full refund through Paddle.
+              Paddle will email the refund receipt and credit note after the
+              refund is approved.
+            </p>
+          </div>
+        </li>
+      </ol>
+
+      <h2>What happens next</h2>
+      <p>
+        Paddle is the merchant of record for MacTC purchases and returns the
+        money to the original payment method where possible. Card refunds
+        typically appear within 3–5 working days; timing for other payment
+        methods may differ.
+      </p>
+      <p>
+        A refund or payment reversal will end paid access. You can keep using
+        MacTC’s free monitoring features.
+      </p>
+      <p>
+        Prefer to contact the merchant of record directly? Use
+        <a href="https://paddle.net/">Paddle Buyer Support</a> and choose the
+        refund option.
+      </p>
+
+      <h2>Your rights</h2>
+      <p>
+        MacTC’s 30-day promise is in addition to any non-waivable rights you
+        have under local law or Paddle’s buyer terms. Requests after 30 days are
+        not covered by MacTC’s voluntary refund promise, but those other rights
+        still apply.
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-brand">MacTC</p>
+        <p class="footer-meta">
+          &copy; <span data-year></span> R&amp;D Solutions LLC. All rights
+          reserved. MacTC is offered under the Macintog brand.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

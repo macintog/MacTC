@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MacTC Privacy Policy</title>
+    <meta
+      name="description"
+      content="Privacy policy for the MacTC website, support-capture, and in-app purchase operations."
+    />
+    <meta name="robots" content="noindex,follow" />
+    <link
+      rel="canonical"
+      href="https://mactc.dev/privacy.html"
+    />
+    <meta name="theme-color" content="#07090b" />
+    <link rel="icon" href="assets/images/mactc-app-icon.png" />
+    <script>
+      (function () {
+        var root = document.documentElement;
+        function setThemeColor(isDark) {
+          var themeColor = document.querySelector('meta[name="theme-color"]');
+          if (themeColor) {
+            themeColor.setAttribute("content", isDark ? "#07090b" : "#f4f5f7");
+          }
+        }
+        try {
+          var mode = localStorage.getItem("mactc-theme-mode") || "auto";
+          if (mode !== "auto" && mode !== "dark" && mode !== "light") {
+            mode = "auto";
+          }
+          var isDark =
+            mode === "dark" ||
+            (mode === "auto" &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches);
+          root.setAttribute("data-theme", isDark ? "dark" : "light");
+          root.setAttribute("data-theme-mode", mode);
+          setThemeColor(isDark);
+        } catch (error) {
+          var fallbackDark = window.matchMedia(
+            "(prefers-color-scheme: dark)",
+          ).matches;
+          root.setAttribute("data-theme", fallbackDark ? "dark" : "light");
+          root.setAttribute("data-theme-mode", "auto");
+          setThemeColor(fallbackDark);
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="assets/css/site.css?v=20260820c" />
+    <script defer src="assets/js/site.js?v=20260820c"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="MacTC home">
+          <span class="brand-mark">
+            <img
+              src="assets/images/mactc-app-icon.png"
+              alt=""
+              class="brand-icon"
+              width="256"
+              height="256"
+              decoding="async"
+            />
+          </span>
+          <span class="brand-text">MacTC</span>
+        </a>
+        <div class="nav-tools">
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="blog.html">Blog</a>
+            <a href="terms.html">EULA</a>
+            <a href="refund.html">Refunds</a>
+            <a href="privacy.html">Privacy</a>
+          </nav>
+          <button class="theme-toggle" type="button" data-theme-toggle>
+            <span class="theme-toggle-pip" aria-hidden="true"></span>
+            <span data-theme-toggle-label>Mode: Auto</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container content-narrow legal reveal">
+      <p class="eyebrow">LEGAL</p>
+      <h1>Privacy Policy</h1>
+      <p>Effective date: August 20, 2026</p>
+      <p>
+        MacTC is offered by R&amp;D Solutions LLC under the Macintog brand.
+        R&amp;D Solutions LLC handles the limited website, support, purchase,
+        and license operations described here. Purchases are initiated in MacTC
+        and completed through Paddle’s secure checkout in your browser.
+      </p>
+
+      <h2>Information processed on your Mac</h2>
+      <p>
+        MacTC processes thermal, performance, and fan information on your Mac.
+        In System mode, MacTC evaluates fan behavior while macOS controls the
+        fans. MacTC does not send this operational telemetry to us unless you
+        choose Capture &amp; Submit.
+      </p>
+
+      <h2>Trials, purchases, and licenses</h2>
+      <p>
+        To provide trials, purchases, restores, installation management,
+        compatibility, and paid access, we process limited purchase, device,
+        and software information. This includes an opaque installation
+        identifier, general Mac model, operating system and app version,
+        activation information, purchase email, transaction identifiers, and
+        purchase, refund, or payment-reversal status. We use that status to
+        grant or end paid access.
+      </p>
+      <p>
+        During an active trial, MacTC may occasionally contact the license
+        service to determine whether the trial period has been extended.
+        License operations do not send serial numbers, hardware UUIDs,
+        hostnames, usernames, Apple Account information, storage details, or
+        user-provided device labels.
+      </p>
+      <p>
+        Paddle is the merchant of record and processes payment-card details
+        under its own privacy obligations and policy. MacTC does not receive
+        payment-card details.
+      </p>
+
+      <h2>Support captures</h2>
+      <p>
+        Capture &amp; Submit is optional and user-initiated. When you choose it,
+        MacTC records and uploads a sanitized diagnostic capture to MacTC
+        support and keeps a copy on your Mac. The submitted capture is designed
+        not to include personal files, app contents, information about other
+        running apps, usernames, hardware serial numbers, or license
+        information.
+      </p>
+      <p>
+        Submitted captures may be used to provide support, diagnose issues,
+        improve MacTC, prevent abuse, and operate the support service. Uploaded
+        captures and related server-side processing records are stored
+        privately, are not sold or public, and are retained for no longer than
+        21 days. Incomplete or rejected uploads and some processing records are
+        deleted sooner.
+      </p>
+
+      <h2>Hardware surveys</h2>
+      <p>
+        Participate in Hardware Survey is optional and user-initiated. It sends
+        the Mac model and Apple Silicon identifiers, SMC key names and data
+        formats, fan count and identifiers, supported fan-speed ranges, and the
+        app and operating-system identity needed to interpret those facts. The
+        survey includes only technical information common to your Mac model and
+        hardware configuration.
+      </p>
+      <p>
+        MacTC development uses this information to support as many hardware
+        configurations as possible. Survey objects and receipts are stored
+        privately and retained for no longer than 21 days. The connection IP
+        address is not written into the survey or its receipt; it may appear
+        briefly in service or security logs and is used in one-way abuse-rate
+        buckets retained for no longer than 24 hours.
+      </p>
+
+      <h2>Website and service providers</h2>
+      <p>
+        The website stores a color-theme preference in your browser and does
+        not include advertising or analytics trackers. Hosting, payment, email,
+        update, and support providers may process basic connection and service
+        information needed to deliver the website, licensing, purchase,
+        recovery, update, and support functions.
+      </p>
+
+      <h2>Retention and sharing</h2>
+      <p>
+        We retain purchase and license records as needed to provide your
+        license and meet legal, financial, and support obligations. We do not
+        sell personal data. We share data only with providers needed to deliver
+        these services or when required by law.
+      </p>
+
+      <h2>Your requests</h2>
+      <p>
+        Use this form for a privacy question or to begin a data access or
+        deletion request. Submitting the form does not by itself verify your
+        identity or authorize disclosure or deletion. We’ll reply to gather
+        only what the request requires.
+      </p>
+      <form
+        class="support-intake-form pricing-cta"
+        data-support-form
+        data-support-endpoint="https://registration.mactc.dev/support/privacy"
+        data-pending-label="Sending request…"
+        data-success-message="Request received. We’ll reply at the email you provided."
+      >
+        <div class="support-form-field">
+          <label for="privacy-request-type">Request type</label>
+          <select id="privacy-request-type" name="request_type" required>
+            <option value="question">Privacy question</option>
+            <option value="access">Data access request</option>
+            <option value="deletion">Data deletion request</option>
+          </select>
+        </div>
+        <div class="support-form-field">
+          <label for="privacy-reply-email">Your reply email</label>
+          <input
+            id="privacy-reply-email"
+            name="reply_email"
+            type="email"
+            autocomplete="email"
+            maxlength="254"
+            required
+          />
+        </div>
+        <div class="support-form-trap" aria-hidden="true">
+          <label for="privacy-company">Company</label>
+          <input
+            id="privacy-company"
+            name="company"
+            type="text"
+            autocomplete="off"
+            tabindex="-1"
+          />
+        </div>
+        <button class="btn btn-primary" type="submit">Send request</button>
+        <p class="support-form-status" data-support-form-status role="status" aria-live="polite"></p>
+      </form>
+      <p>
+        We may update this policy as MacTC or its services change. The effective
+        date above identifies the current version.
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-brand">MacTC</p>
+        <p class="footer-meta">
+          &copy; <span data-year></span> R&amp;D Solutions LLC. All rights
+          reserved. MacTC is offered under the Macintog brand.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MacTC Pricing | Trial and One-Time Purchase for Mac Fan Control</title>
+    <meta
+      name="description"
+      content="MacTC pricing is simple: free live monitor, 7-day trial, and a $12 one-time purchase for the background fan control layer."
+    />
+    <link
+      rel="canonical"
+      href="https://mactc.dev/pricing.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="MacTC Pricing | Trial and One-Time Purchase for Mac Fan Control"
+    />
+    <meta
+      property="og:description"
+      content="MacTC pricing is simple: free live monitor, 7-day trial, and a $12 one-time purchase for the background fan control layer."
+    />
+    <meta
+      property="og:url"
+      content="https://mactc.dev/pricing.html"
+    />
+    <meta
+      property="og:image"
+      content="https://mactc.dev/assets/images/mactc-social-preview.jpg?v=20260820a"
+    />
+    <meta
+      property="og:image:alt"
+      content="MacTC social preview showing the app icon, thermal chart background, and MacTC app window"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="MacTC Pricing | Trial and One-Time Purchase for Mac Fan Control"
+    />
+    <meta
+      name="twitter:description"
+      content="MacTC pricing is simple: free live monitor, 7-day trial, and a $12 one-time purchase for the background fan control layer."
+    />
+    <meta
+      name="twitter:image"
+      content="https://mactc.dev/assets/images/mactc-social-preview.jpg?v=20260820a"
+    />
+    <meta name="theme-color" content="#07090b" />
+    <link rel="icon" href="assets/images/mactc-app-icon.png" />
+    <script>
+      (function () {
+        var root = document.documentElement;
+        function setThemeColor(isDark) {
+          var themeColor = document.querySelector('meta[name="theme-color"]');
+          if (themeColor) {
+            themeColor.setAttribute("content", isDark ? "#07090b" : "#f4f5f7");
+          }
+        }
+        try {
+          var mode = localStorage.getItem("mactc-theme-mode") || "auto";
+          if (mode !== "auto" && mode !== "dark" && mode !== "light") {
+            mode = "auto";
+          }
+          var isDark =
+            mode === "dark" ||
+            (mode === "auto" &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches);
+          root.setAttribute("data-theme", isDark ? "dark" : "light");
+          root.setAttribute("data-theme-mode", mode);
+          setThemeColor(isDark);
+        } catch (error) {
+          var fallbackDark = window.matchMedia(
+            "(prefers-color-scheme: dark)",
+          ).matches;
+          root.setAttribute("data-theme", fallbackDark ? "dark" : "light");
+          root.setAttribute("data-theme-mode", "auto");
+          setThemeColor(fallbackDark);
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="assets/css/site.css?v=20260820c" />
+    <script defer src="assets/js/site.js?v=20260820c"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="MacTC home">
+          <span class="brand-mark">
+            <img
+              src="assets/images/mactc-app-icon.png"
+              alt=""
+              class="brand-icon"
+              width="256"
+              height="256"
+              decoding="async"
+            />
+          </span>
+          <span class="brand-text">MacTC</span>
+        </a>
+        <div class="nav-tools">
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="blog.html">Blog</a>
+            <a href="terms.html">EULA</a>
+            <a href="refund.html">Refunds</a>
+            <a href="privacy.html">Privacy</a>
+          </nav>
+          <button class="theme-toggle" type="button" data-theme-toggle>
+            <span class="theme-toggle-pip" aria-hidden="true"></span>
+            <span data-theme-toggle-label>Mode: Auto</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="container section reveal">
+        <div class="pricing-layout">
+          <div class="section-shell section-shell-accent">
+            <div class="section-heading compact">
+              <h1>One price after the trial.</h1>
+              <p>
+                Use the live monitor for free. During the seven-day trial, let
+                MacTC control the fans under your real workloads. If the more
+                proactive policy earns its noise, unlock it for $12.
+              </p>
+              <p class="hero-tradeoff">
+                MacTC spends fan noise earlier to help sustained work hold
+                performance. Results still depend on your Mac, workload, room
+                temperature, firmware, sensors, and current system state.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="downloads/MacTC-646b.pkg"
+                  >Download the read-only trial</a
+                >
+                <a class="btn btn-secondary" href="refund.html"
+                  >Refund policy</a
+                >
+              </div>
+              <p class="hero-tradeoff">
+                Requires an arm64 Apple Silicon Mac running macOS 14 or later.
+                Active fan control is currently validated on the two-fan M4
+                MacBook Pro and one-fan M2 Mac mini configurations. Confirmed
+                fanless Macs stay monitoring-only; other fan configurations
+                are not yet supported for active control.
+              </p>
+            </div>
+          </div>
+
+          <article class="pricing-card">
+            <p class="panel-label">One-time unlock</p>
+            <h2>$12</h2>
+            <p class="pricing-subtitle">
+              Unlocks MacTC’s background fan-control policy after the trial.
+            </p>
+            <ul class="pricing-list">
+              <li>Seven-day trial with active fan control</li>
+              <li>30-day refund policy</li>
+              <li>Purchase starts in MacTC</li>
+              <li>Updates included for this major version</li>
+            </ul>
+            <div class="pricing-cta">
+              <a class="btn btn-primary" href="downloads/MacTC-646b.pkg"
+                >Download the read-only trial</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="container section reveal">
+        <div class="purchase-grid">
+          <div class="workflow-note">
+            <h2>Purchase starts in MacTC.</h2>
+            <p>
+              The website explains the terms. Downloads are temporarily
+              unavailable. After you start the purchase in MacTC, Paddle’s
+              secure checkout opens in your browser to complete it.
+            </p>
+            <p>
+              If purchase or activation fails, contact support and include the
+              email used for purchase plus the MacTC version shown in the app.
+            </p>
+          </div>
+
+          <ol class="steps">
+            <li>
+              <span>1</span>
+              <div>
+                <h3>Install and try MacTC</h3>
+                <p>
+                  Use the app under your own workload contour and compare the
+                  more proactive fan control against System mode.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>2</span>
+              <div>
+                <h3>Unlock background control</h3>
+                <p>
+                  The paid path begins in MacTC and opens Paddle’s secure
+                  checkout in your browser.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>3</span>
+              <div>
+                <h3>Check terms before you commit</h3>
+                <p>
+                  Terms, privacy, and refund policy stay on the site so the
+                  purchase path is easy to verify before you commit.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-brand">MacTC</p>
+        <p class="footer-meta">
+          &copy; <span data-year></span> R&amp;D Solutions LLC. All rights
+          reserved. MacTC is offered under the Macintog brand.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
